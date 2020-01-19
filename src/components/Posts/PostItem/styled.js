@@ -27,18 +27,18 @@ export const PostItemTag = styled.div`
   border-radius: 50%;
   color: #fff;
   display: flex;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 700;
   justify-content: center;
-  min-height: 70px;
-  min-width: 70px;
+  min-height: 65px;
+  min-width: 65px;
   text-transform: uppercase;
 `
 
 export const PostItemInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
 `
 
 export const PostItemDate = styled.time`

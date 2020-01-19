@@ -11,6 +11,9 @@ const Posts = () => {
                   allMarkdownRemark {
                         edges {
                             node {
+                                fields {
+                                    slug
+                                }
                                 timeToRead
                                 frontmatter {
                                     title
@@ -41,12 +44,15 @@ const Posts = () => {
                             background,
                             description,
                             date
+                        },
+                        fields: {
+                            slug
                         }
                     }
                 }) => (
                     <PostItem
-                        key='/about'
-                        slug='/about'
+                        key={slug}
+                        slug={slug}
                         background={background}
                         category={category}
                         date={date}
