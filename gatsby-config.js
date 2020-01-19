@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Arco-Íris Blog`,
-    description: `Uma jornada coletiva em busca da conexão com nós mesmos a partir do auto-conhecimento e espiritualidade.`,
-    author: `@gatsbyjs`,
+    title: `Vitor Régis`,
+    position: `JS Full-Stack Developer`,
+    description: `Um cantinho com alguns artigos meus sobre tecnologia e projetos que realizei como freelancer. `,
+    author: `@vitorregisr`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -24,6 +25,17 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/data/posts`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      plugins: []
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

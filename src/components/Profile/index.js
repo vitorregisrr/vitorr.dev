@@ -4,6 +4,7 @@ import {useStaticQuery} from 'gatsby'
 import Avatar from './Avatar'
 import * as S from './styled';
 import SocialLinks from './SocialLinks';
+import MenuLinks from './MenuLinks';
 
 const Profile = () => {
 
@@ -11,7 +12,8 @@ const Profile = () => {
         site: {
             siteMetadata: {
                 title,
-                description
+                description,
+                position
             }
         }
     } = useStaticQuery(graphql `
@@ -19,7 +21,8 @@ const Profile = () => {
                     site{
                         siteMetadata {
                         author
-                        description
+                        description,
+                        position,
                         title
                     }
                 }
@@ -29,14 +32,19 @@ const Profile = () => {
     return (
         <S.ProfileWrapper>
             <Avatar></Avatar>
-            <S.ProfileAuthor className="profile__name">
+            <S.ProfileAuthor>
                 {title}
             </S.ProfileAuthor>
-            <S.ProfileDescription className="profile__desc">
+            <S.ProfilePosition>
+                {position}
+            </S.ProfilePosition>
+            <S.ProfileDescription>
                 {description}
             </S.ProfileDescription>
 
             <SocialLinks></SocialLinks>
+
+            <MenuLinks></MenuLinks>
         </S.ProfileWrapper>
     )
 }

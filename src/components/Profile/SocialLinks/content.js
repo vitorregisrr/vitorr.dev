@@ -12,6 +12,11 @@ const links = [
         label: 'Instagram',
         url: 'https://twitter.com/vitorregisr'
     },
+
+    {
+        label: 'Linkedin',
+        url: 'https://www.linkedin.com/in/vitorregisr'
+    },
 ]
 
 export default links;

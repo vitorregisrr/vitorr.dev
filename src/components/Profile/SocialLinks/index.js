@@ -11,17 +11,21 @@ const SocialLinks = () => {
             <S.SocialLinksList>
                 {links.map(link => {
                     const Icon = Icons[link.label]
-                    return(
+                    return (
                         <S.SocialLinksItem key={'ico-' + link.label}>
-                            <S.SocialLinksLink title={link.label} href={link.url} target="_blank">
+                            <S.SocialLinksLink
+                                title={link.label}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <S.IconWrapper>
-                                    <Icon />
+                                    <Icon/>
                                 </S.IconWrapper>
                             </S.SocialLinksLink>
                         </S.SocialLinksItem>
-                        )
-                    })
-                }
+                    )
+                })
+}
             </S.SocialLinksList>
         </S.SocialLinksWrapper>
     )

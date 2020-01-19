@@ -6,6 +6,7 @@ import SEO from '../SEO'
 import GlobalStyles from '../../styles/global'
 import * as S from './styled'
 import Sidebar from '../Sidebar'
+import MenuBar from '../MenuBar'
 
 const Layout = ({seo, children}) => {
 
@@ -17,6 +18,7 @@ const Layout = ({seo, children}) => {
                 <Profile></Profile>
             </Sidebar>
             <S.LayoutMain>{children}</S.LayoutMain>
+            <MenuBar></MenuBar>
         </S.LayoutWrapper>
     )
 }
