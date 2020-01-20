@@ -10,32 +10,32 @@ const MenuBar = () => {
             <S.MenuBarGroup>
                 <S.MenuBarLink to="/" title="Voltar para home">
                     <S.MenuBarItem>
-                        <Icons.Home />
+                        <Icons.Home/>
                     </S.MenuBarItem>
                 </S.MenuBarLink>
 
                 <S.MenuBarLink to="/search" title="Pesquisar">
                     <S.MenuBarItem>
-                        <Icons.Search />
+                        <Icons.Search/>
                     </S.MenuBarItem>
                 </S.MenuBarLink>
 
                 <S.MenuBarLink to="/portfolio" title="Portfólio">
                     <S.MenuBarItem>
-                        <Icons.Portrait />
+                        <Icons.Portrait/>
                     </S.MenuBarItem>
                 </S.MenuBarLink>
             </S.MenuBarGroup>
 
             <S.MenuBarGroup>
                 <S.MenuBarItem title="Mudar o tema">
-                    <Icons.Light />
+                    <Icons.Light/>
                 </S.MenuBarItem>
                 <S.MenuBarItem title="Mudar visualização">
-                    <Icons.Grid />
+                    <Icons.Grid/>
                 </S.MenuBarItem>
                 <S.MenuBarItem title="Ir para o topo">
-                    <Icons.Arrow />
+                    <Icons.Arrow/>
                 </S.MenuBarItem>
             </S.MenuBarGroup>
         </S.MenuBarWrapper>

@@ -16,7 +16,7 @@ export const PostItemWrapper = styled.article`
   align-items: center;
   border-bottom: 1px solid #38444d;
   display: flex;
-  padding: 1.4rem 1.3rem;
+  padding: 1.4rem 1.5rem;
   width: 100%;
   box-sizing: border-box;
 `

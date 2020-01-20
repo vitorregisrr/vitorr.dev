@@ -1,9 +1,8 @@
 import React from 'react'
-
 import * as S from './styled';
 
 const Sidebar = ({children}) => {
-    return(
+    return (
         <S.SidebarWrapper>
             {children}
         </S.SidebarWrapper>
