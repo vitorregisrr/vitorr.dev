@@ -8,8 +8,6 @@ import * as S from './styled'
 import Sidebar from '../Sidebar'
 import MenuBar from '../MenuBar'
 
-require('animate.css')
-
 const Layout = ({seo, children}) => {
 
     return (

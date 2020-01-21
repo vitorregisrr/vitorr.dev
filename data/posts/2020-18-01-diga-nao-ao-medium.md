@@ -6,10 +6,6 @@ category: "JS"
 background: "#7AAB13"
 ---
 
-# Aquilone tenax nebulas
-
-## Iovis saxum
-
 Lorem markdownum [ex rupit](http://gutturehaec.io/manus.aspx): est radice ad
 quies, avus, sub aureus. Dabat contingere aquas, fata *vincere* species inde.
 Ait fida ego pinguesque super, pugnat, fratres moraque tamen telis poterat!
@@ -23,17 +19,21 @@ Ait fida ego pinguesque super, pugnat, fratres moraque tamen telis poterat!
 
 Habere facies, fuit modo, vetus Saturnus et perfida. *Nomenque nomenque quoque*.
 
-## Tauri quodque pia recisum crura cuncta et
-
-Attollit ferrum et genetrici iuveni fremebant color et nefasque Venus. Ars *auro
-opem piosque* opus. Undis motae Aesacon, oro si, spesque postque
-[deus](http://nulla.org/) quae, trementes **obstitit quem**.
-
-> Patitur ad addere vulgus ima cruor Anaxarete; tibi,
-> [viva](http://devastata.net/falsa). Praemia omnes siccoque velant, sed
-> silentum, bracchia. Visam et fulvo: foedera acuta sic labores oceano ulcisci:
-> per adspicit caelo aures. Non illa ordine manare plurimus decimo, est hominem
-> fulgorem brumalis supplice.
+```jsx
+import React from "react"
+import Profile from "../Profile"
+import SocialLinks from "../SocialLinks"
+import MenuLinks from "../MenuLinks"
+import * as S from "./styled"
+const Sidebar = () => (
+  <S.SidebarWrapper>
+    <Profile />
+    <SocialLinks />
+    <MenuLinks />
+  </S.SidebarWrapper>
+)
+export default Sidebar
+```
 
 Est toto quod ferrum pater fronte, ad quis aquatica! Pericula gerit curvavit
 inque sine bibat Clymeni tempora cecidere maneret. Dubitat ingeniis. Ore agit,
