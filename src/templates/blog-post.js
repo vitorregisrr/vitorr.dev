@@ -3,8 +3,9 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '../components/Layout';
 import PostContent from '../components/PostContent';
+import RecommendedPosts from '../components/recommendedPosts';
 
-const BlogPost = ({data}) => {
+const BlogPost = ({data, pageContext}) => {
     const post = data.markdownRemark;
 
     return (
@@ -18,6 +19,8 @@ const BlogPost = ({data}) => {
                 timeToRead={post.timeToRead}
                 html={post.html}
             />
+
+            <RecommendedPosts next={pageContext.nextPost} previous={pageContext.previousPost}></RecommendedPosts>
         </Layout>
     )
 }
