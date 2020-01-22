@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+const algoliaQueries = require('./src/utils/algolia_queries')
+
 module.exports = {
     siteMetadata: {
         title: `Vitor Régis`,
@@ -51,7 +55,7 @@ module.exports = {
                         maxWidth: 960
                     }
                 },
-                `gatsby-remark-lazy-load`, 
+                `gatsby-remark-lazy-load`,
                 `gatsby-remark-prismjs`
             ]
         },
@@ -67,7 +71,17 @@ module.exports = {
                 display: `minimal-ui`,
                 icon: `src/images/favicon.png`, // This path is relative to the root of the site.
             }
-        },
+        }, {
+            resolve: `gatsby-plugin-algolia-search`,
+            options: {
+                appId: process.env.ALGOLIA_APP_ID,
+                apiKey: process.env.ALGOLIA_ADMIN_KEY,
+                indexName: process.env.ALGOLIA_INDEX_NAME,
+                queries: algoliaQueries,
+                chunckSize: 10000,
+                enablePartialsUpdates: true
+            }
+        }
         // this (optional) plugin enables Progressive Web App + Offline functionality To
         // learn more, visit: https://gatsby.dev/offline `gatsby-plugin-offline`,
     ]

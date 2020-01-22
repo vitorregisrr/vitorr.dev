@@ -7,8 +7,10 @@
   "dependencies": {
     "add": "^2.0.6",
     "animate.css": "^3.7.2",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-algolia-search": "^0.5.6",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
@@ -26,6 +28,7 @@
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-wow": "^1.0.0",

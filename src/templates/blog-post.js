@@ -4,6 +4,7 @@ import {graphql} from 'gatsby'
 import Layout from '../components/Layout';
 import PostContent from '../components/PostContent';
 import RecommendedPosts from '../components/recommendedPosts';
+import Comments from '../components/comments';
 
 const BlogPost = ({data, pageContext}) => {
     const post = data.markdownRemark;
@@ -21,6 +22,8 @@ const BlogPost = ({data, pageContext}) => {
             />
 
             <RecommendedPosts next={pageContext.nextPost} previous={pageContext.previousPost}></RecommendedPosts>
+
+            <Comments url={post.fields.slug} titlt={post.frontmatter.title}></Comments>
         </Layout>
     )
 }
@@ -30,6 +33,9 @@ export const query = graphql `
     markdownRemark(fields: {slug: {eq: $slug}}) {
         html
         timeToRead
+        fields{
+            slug
+        }
         frontmatter {
             title
             description
