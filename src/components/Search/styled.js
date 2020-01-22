@@ -46,8 +46,16 @@ export const SearchWrapper = styled.section `
     font-size: 1.7rem;
     padding: 0.5rem;
     width: 100%;
+    transition: border 0.3s;
+
     &::placeholder {
       color: var(--texts);
+    }
+
+    &:focus{
+      box-shadow: none;
+      outline: none;
+      border-bottom: 1px solid var(--highlight);
     }
   }
   .ais-SearchBox-submit,

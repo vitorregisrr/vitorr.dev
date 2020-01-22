@@ -37,7 +37,7 @@ const MenuBar = () => {
                     </S.MenuBarItem>
                 </S.MenuBarLink>
 
-                <S.MenuBarLink to="/portfolio" title="Portfólio">
+                <S.MenuBarLink to="/portfolio" title="Portfólio" className="portfolio">
                     <S.MenuBarItem>
                         <Icons.Portrait/>
                     </S.MenuBarItem>

@@ -34,7 +34,7 @@ const Profile = () => {
            <Link to="/">
             <Avatar></Avatar>
            </Link>
-           <div>
+           <div style={{'display': 'flex', 'flex-direction': 'column', 'justify-content': 'center'}}>
            <S.ProfileAuthor>
                 {title}
             </S.ProfileAuthor>

@@ -10,6 +10,7 @@ export const ProfileWrapper = styled.aside`
 
     ${media.lessThan("large")`
         flex-direction: row;
+        padding: 5px 0 0 0;
     `}
 `
 

@@ -9,7 +9,7 @@ export const PostHeader = styled.header`
   border-bottom: 1px solid var(--borders);
 
   ${media.lessThan("large")`
-    padding: 3rem 0 0;
+    padding: .8rem 0 0;
     max-width: 100%;
   `}
 `
