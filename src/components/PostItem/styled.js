@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const PostItemLink = styled(Link)`
-  color: #8899a6;
+  color: var(--texts);
   display: flex;
   text-decoration: none;
   transition: all 0.4s;
@@ -14,7 +14,7 @@ export const PostItemLink = styled(Link)`
 
 export const PostItemWrapper = styled.article`
   align-items: center;
-  border-bottom: 1px solid #38444d;
+  border-bottom: 1px solid var(--borders);
   display: flex;
   padding: 1.4rem 1.5rem;
   width: 100%;

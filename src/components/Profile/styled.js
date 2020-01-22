@@ -5,7 +5,7 @@ export const ProfileWrapper = styled.aside`
     flex-direction: column;
     padding: 5px 15px;
     width: 100%;
-    color: #8899a6;
+    color: var(--texts);
 
     @media screen and (max-width: 1200px){
         padding: 10px 5px;
@@ -13,7 +13,7 @@ export const ProfileWrapper = styled.aside`
 `
 
 export const ProfileLink = styled.aside`
-    background-color: #8899a6;
+    background-color: var(--texts);
     text-decoration: none;
     transition: all 0.4s ease-in;
 

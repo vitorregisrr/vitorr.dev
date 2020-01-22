@@ -8,8 +8,8 @@ export const SidebarWrapper = styled.aside`
      height: 100vh;
      padding: 2rem;
      text-align: center;
-     border-right: 1px solid #38444d;
-     background-color: #192734;
+     border-right: 1px solid var(--borders);
+     background-color: var(--background);
      width: 17rem;
      box-sizing: border-box;
 

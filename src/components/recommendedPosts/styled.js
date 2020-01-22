@@ -2,26 +2,26 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const RecommendedWrapper = styled.section`
-  border-bottom: 1px solid #38444d;
-  border-top: 1px solid #38444d;
+  border-bottom: 1px solid var(--borders);
+  border-top: 1px solid var(--borders);
   background: #192734;
   display: flex;
 `
 
 export const RecommendedLink = styled(Link)`
   align-items: center;
-  background: #192734;
-  color: #1fa1f2;
+  background: var(--background);
+  color: var(--texts);
   display: flex;
   padding: 3rem;
   text-decoration: none;
   transition: background 0.5s;
   width: 50%;
   &:hover {
-    background: #38444d;
+    background: var(--highlight);
   }
   &.previous {
-    border-right: 1px solid #38444d;
+    border-right: 1px solid var(--borders);
   }
   &.next {
     justify-content: flex-end;

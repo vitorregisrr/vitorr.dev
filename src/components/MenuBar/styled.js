@@ -12,7 +12,7 @@ export const MenuBarWrapper = styled.aside `
     padding: 1rem 0;
     height: 100vh;
     background: #192734;
-    border-left: 1px solid #38444d;
+    border-left: 1px solid var(--borders);
     box-sizing: border-box;
 `
 
@@ -22,7 +22,7 @@ export const MenuBarGroup = styled.div `
 `
 
 export const MenuBarItem = styled.span `
-    color: #8899a6; 
+    color: var(--texts); 
     cursor: pointer; 
     display: block; 
     height: 1.9rem; 

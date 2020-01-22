@@ -17,10 +17,10 @@ export const MenusLinkItem = styled.li `
 
 export const MenuLinksLink = styled(Link)`
     text-decoration: none;
-    color: #8899a6;
+    color: var(--texts);
     transition: all 0.4s;
 
     &.active, &:hover{
-        color: #1fa1f2;
+        color: var(--highlight);
     }
 `
