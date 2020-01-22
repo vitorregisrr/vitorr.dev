@@ -17,7 +17,7 @@ export const LayoutMain = styled.main `
   padding-right: 3.4rem;
 
   ${media.lessThan("large")`
-    padding: 6rem 0 3rem 0;
+    padding: 6rem 0 5rem 0;
   `}
 
   body[data-display="grid"] & {
