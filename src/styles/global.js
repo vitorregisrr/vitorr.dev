@@ -11,7 +11,7 @@ body{
 	/* Set variables */
 
 	--borders: #3844d;
-	--texts: 8899a6;
+	--texts: #8899a6;
 	--postColor: #fff;
 	--highlight: #1fa1f2;
 	--mediumBackground: #192734;
