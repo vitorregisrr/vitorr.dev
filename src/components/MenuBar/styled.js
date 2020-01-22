@@ -11,7 +11,7 @@ export const MenuBarWrapper = styled.aside `
     align-items: center;
     padding: 1rem 0;
     height: 100vh;
-    background: #192734;
+    background: var(--background);
     border-left: 1px solid var(--borders);
     box-sizing: border-box;
 `

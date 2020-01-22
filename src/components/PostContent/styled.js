@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const PostHeader = styled.header`
-  color: #fff;
+  color: var(--texts);
   margin: auto;
   max-width: 60rem;
   padding: 2.7rem 7.3rem 2rem;
@@ -42,7 +42,7 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: #fff;
+    color: var(--texts);
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.9;

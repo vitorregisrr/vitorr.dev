@@ -18,6 +18,16 @@ body{
 	--background: #16202c;
 	--white: #fff;
 	--black: #222;
+
+	&.light{
+		--borders: #dedede;
+		--postColor: #111;
+		--texts: #555555;
+		--highlight: #1fa1f2;
+		--mediumBackground: #f0f0f33;
+		--background: #fff;
+		--white: #fff;
+	}
 }
 `
 
