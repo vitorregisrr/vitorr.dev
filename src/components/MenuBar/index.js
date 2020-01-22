@@ -6,9 +6,10 @@ import * as S from './styled'
 
 const MenuBar = () => {
     const [theme,
-        setTheme] = useState('dark')
+        setTheme] = useState('light')
+
     const [_null,
-        setDisplay] = useState('list')
+        setDisplay] = useState('grid')
 
     const isDarkMode = theme === 'dark';
     const isListMode = theme === 'list';

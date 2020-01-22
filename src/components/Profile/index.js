@@ -1,5 +1,5 @@
 import React from 'react'
-import {useStaticQuery} from 'gatsby'
+import {useStaticQuery, Link} from 'gatsby'
 
 import Avatar from './Avatar'
 import * as S from './styled';
@@ -31,7 +31,9 @@ const Profile = () => {
 
     return (
         <S.ProfileWrapper>
+           <Link to="/">
             <Avatar></Avatar>
+           </Link>
            <div>
            <S.ProfileAuthor>
                 {title}
