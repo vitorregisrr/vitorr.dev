@@ -3,54 +3,57 @@ import React from 'react'
 import Layout from '../components/Layout'
 import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
+import ListWrapper from '../components/ListWrapper'
 
 const BlogList = props => {
     const posts = props.data.allMarkdownRemark.edges
 
-    const { currentPage, numPages } = props.pageContext
+    const {currentPage, numPages} = props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`
+    const prevPage = currentPage - 1 === 1
+        ? '/'
+        : `/page/${currentPage - 1}`
     const nextPage = `/page/${currentPage + 1}`
 
     return (
         <Layout seo={{
             title: "Home"
         }}>
-            {posts.map(({
-                node: {
-                    timeToRead,
-                    frontmatter: {
-                        title,
-                        category,
-                        background,
-                        description,
-                        date
-                    },
-                    fields: {
-                        slug
+            <ListWrapper>
+                {posts.map(({
+                    node: {
+                        timeToRead,
+                        frontmatter: {
+                            title,
+                            category,
+                            background,
+                            description,
+                            date
+                        },
+                        fields: {
+                            slug
+                        }
                     }
-                }
-            }) => (
-            <PostItem
-                key={slug}
-                slug={slug}
-                background={background}
-                category={category}
-                date={date}
-                timeToRead={timeToRead}
-                title={title}
-                description={description}/>))
-        }
-        
+                }) => (<PostItem
+                    key={slug}
+                    slug={slug}
+                    background={background}
+                    category={category}
+                    date={date}
+                    timeToRead={timeToRead}
+                    title={title}
+                    description={description}/>))
+}
+
+            </ListWrapper>
             <Pagination
                 isFirst={isFirst}
                 isLast={isLast}
                 currentPage={currentPage}
                 numPages={numPages}
                 prevPage={prevPage}
-                nextPage={nextPage}
-            />
+                nextPage={nextPage}/>
         </Layout>
     )
 }

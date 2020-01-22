@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import media from "styled-media-query"
 
 export const SidebarWrapper = styled.aside`
-     position: fixed;
      display: flex;
      align-items: center;
      flex-direction: column;
+     position: fixed;
      height: 100vh;
      padding: 2rem;
      text-align: center;
@@ -13,9 +14,19 @@ export const SidebarWrapper = styled.aside`
      width: 17rem;
      box-sizing: border-box;
 
+     ${media.lessThan("large")`
+        align-items: center;
+        height: auto;
+        padding: 0.9rem 1.4rem;
+        width: 100%;
+        text-align: left;
+        border: none;
+        box-sizing: unset;
+        border-bottom: 1px solid var(--borders);
+        box-shadow: 1px 1px 20px rgba(0,0,0, .4);
 
- @media screen and (max-width: 1200px){
-     width: 100vw;
- }
-
+        body[data-theme="light"] & {
+            box-shadow: 1px 1px 20px rgba(0,0,0, .1);
+        }
+     `}
 `

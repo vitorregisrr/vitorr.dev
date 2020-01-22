@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import media from "styled-media-query"
 
 export const ProfileWrapper = styled.aside`
     display: flex;
@@ -7,9 +8,9 @@ export const ProfileWrapper = styled.aside`
     width: 100%;
     color: var(--texts);
 
-    @media screen and (max-width: 1200px){
-        padding: 10px 5px;
-    }
+    ${media.lessThan("large")`
+        flex-direction: row;
+    `}
 `
 
 export const ProfileLink = styled.aside`
@@ -20,18 +21,33 @@ export const ProfileLink = styled.aside`
     &:hover{
         color: #1fa12f;
     }
+
+    ${media.lessThan("large")`
+        display: flex;
+        text-align: left;
+    `}
 `
 
 export const ProfileAuthor = styled.h1`
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: 1.3rem;
+
+    ${media.lessThan("large")`
+        font-size: 1.2rem;
+        margin: 0;
+    `}
 `
 
-export const ProfilePosition = styled.h1`
+export const ProfilePosition = styled.small`
     font-weight: 300;
     font-size: 0.7rem;
     margin-top: 0.2rem;
+
+    ${media.lessThan("large")`
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
+    `}
 `
 
 
@@ -42,7 +58,7 @@ export const ProfileDescription = styled.p`
   text-align: center;
   margin-top: 1rem;
 
-  @media screen and (max-width: 1200px){
-        display: none;
-    }
+  ${media.lessThan("large")`
+    display: none;
+  `}
 `

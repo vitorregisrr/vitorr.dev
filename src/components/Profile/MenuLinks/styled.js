@@ -1,9 +1,11 @@
 import styled from 'styled-components'
-
+import media from "styled-media-query"
 import {Link} from 'gatsby'
 
 export const MenuLinksWrappper = styled.nav `
-    margin-top: 0rem; 
+    ${media.lessThan("large")`
+        display: none;
+    `}
 `
 
 export const MenusLinkList = styled.ul `

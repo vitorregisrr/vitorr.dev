@@ -10,8 +10,8 @@ body{
 
 	/* Set variables */
 
-	&.dark{
-		--borders: #3844d;
+	&[data-theme="dark"]{
+		--borders: #38444d;
 		--texts: #8899a6;
 		--postColor: #fff;
 		--highlight: #1fa1f2;
@@ -21,7 +21,7 @@ body{
 		--black: #222;
 	}
 
-	&.light{
+	&[data-theme="light"]{
 		--borders: #dedede;
 		--postColor: #111;
 		--texts: #555555;
