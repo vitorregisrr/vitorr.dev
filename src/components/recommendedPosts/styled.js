@@ -19,7 +19,6 @@ export const RecommendedLink = styled(Link)`
   width: 50%;
   &:hover {
     background: var(--highlight);
-    color: #fff;
   }
   &.previous {
     border-right: 1px solid var(--borders);
