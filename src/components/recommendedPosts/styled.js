@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export const RecommendedWrapper = styled.section`
   border-bottom: 1px solid var(--borders);
   border-top: 1px solid var(--borders);
-  background: #192734;
+  background: var(--background);
   display: flex;
 `
 
