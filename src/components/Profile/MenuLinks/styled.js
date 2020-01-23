@@ -10,11 +10,11 @@ export const MenuLinksWrappper = styled.nav `
 
 export const MenusLinkList = styled.ul `
     font-size: 0.9rem;
-    font-weight: 300;
+    font-weight: 500;
 `
 
 export const MenusLinkItem = styled.li `
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
 `
 
 export const MenuLinksLink = styled(TransitionLink)`

@@ -16,6 +16,7 @@ const RecommendedPosts = ({next, previous}) => {
 
             {next && (
                 <S.RecommendedLink
+                    to={next.fields.slug}
                     direction="right"
                     className="next">
                     {next.frontmatter.title}
