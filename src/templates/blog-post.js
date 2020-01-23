@@ -11,7 +11,10 @@ const BlogPost = ({data, pageContext}) => {
 
     return (
         <Layout seo={{
-            title: post.frontmatter.title
+            title: post.frontmatter.title,
+            description: post.frontmatter.description,
+            image: post.frontmatter.image
+
         }}>
             <PostContent
                 title={post.frontmatter.title}
@@ -23,7 +26,7 @@ const BlogPost = ({data, pageContext}) => {
 
             <RecommendedPosts next={pageContext.nextPost} previous={pageContext.previousPost}></RecommendedPosts>
 
-            <Comments url={post.fields.slug} titlt={post.frontmatter.title}></Comments>
+            <Comments url={post.fields.slug} title={post.frontmatter.title}></Comments>
         </Layout>
     )
 }

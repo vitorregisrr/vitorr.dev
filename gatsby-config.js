@@ -7,7 +7,8 @@ module.exports = {
         title: `Vitor Régis`,
         position: `JS Full-Stack Developer`,
         description: `Um cantinho com alguns artigos meus sobre tecnologia e projetos que realizei como freelancer. `,
-        author: `@vitorregisr`
+        author: `@vitorregisr`,
+        siteUrl: `https://www.vitorr.dev`
     },
     plugins: [
         // needs to be the first one to work with gatsby-remark-images

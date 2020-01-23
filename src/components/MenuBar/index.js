@@ -62,11 +62,11 @@ const MenuBar = () => {
                     window.__setPreferredDisplay(isListMode
                         ? 'grid'
                         : 'list')
-                }}>
+                    }}>
 
                     {window.__display == 'list'
-                        ? <Icons.List/>
-                        : <Icons.Grid/>}
+                        ? <Icons.Grid/>
+                        : <Icons.List/>}
                 </S.MenuBarItem>
                 <S.MenuBarItem title="Ir para o topo">
                     <Icons.Arrow/>

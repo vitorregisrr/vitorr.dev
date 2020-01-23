@@ -29,7 +29,8 @@ const BlogList = props => {
                             category,
                             background,
                             description,
-                            date
+                            date,
+                            image
                         },
                         fields: {
                             slug
@@ -43,6 +44,7 @@ const BlogList = props => {
                     date={date}
                     timeToRead={timeToRead.toString()}
                     title={title}
+                    image={image}
                     description={description}/>))
 }
 
@@ -72,6 +74,7 @@ export const query = graphql `
                         }
                         timeToRead
                         frontmatter {
+                        image
                         title
                         category
                         background

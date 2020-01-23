@@ -11,11 +11,12 @@ const PostItem = ({
     date,
     timeToRead,
     title,
-    description
+    description,
+    image
 }) => {
     return (
         <ReactWOW animation='fadeInUp'>
-            <S.PostItemLink to={slug}>
+            <S.PostItemLink to={slug} image={image}>
                 <S.PostItemWrapper>
                     <S.PostItemTag background={background}>
                         <ReactWOW animation='zoomIn'>
@@ -44,7 +45,8 @@ PostItem.propTypes = {
     date: PropTypes.string.isRequired,
     timeToRead: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string
 }
 
 export default PostItem;

@@ -3,9 +3,11 @@ import TransitionLink from '../TransitionLink/'
 import media from "styled-media-query"
 
 export const PostItemLink = styled(TransitionLink)`
+  position: relative;
   color: var(--texts);
   text-decoration: none;
   transition: all 0.4s;
+  overflow: hidden;
 
   &:hover {
     color: #1fa1f2;
@@ -16,6 +18,35 @@ export const PostItemLink = styled(TransitionLink)`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:after{
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      background-image: url(${props => props.image || 'none'});
+      height: 120%;
+      background-size: cover;
+      background-position: center center;
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+    }
+
+    &:before{
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: ${props => props.image ? 'var(--background)' : 'none'};
+      opacity: .8;
+    }
+ 
+    
   }
 `
 
@@ -25,6 +56,7 @@ export const PostItemWrapper = styled.article`
   border-bottom: 1px solid var(--borders);
   padding: 1.4rem 1.5rem;
   box-sizing: border-box;
+  z-index: 2;
 
   ${media.lessThan("large")`
     align-items: flex-start;
