@@ -7,13 +7,17 @@ const RecommendedPosts = ({next, previous}) => {
     return (
         <S.RecommendedWrapper>
             {previous && (
-                <S.RecommendedLink to={previous.fields.slug} className="previous">
+                <S.RecommendedLink
+                    to={previous.fields.slug}
+                    className="previous">
                     {previous.frontmatter.title}
                 </S.RecommendedLink>
             )}
 
             {next && (
-                <S.RecommendedLink to={next.fields.slug} className="next">
+                <S.RecommendedLink
+                    direction="right"
+                    className="next">
                     {next.frontmatter.title}
                 </S.RecommendedLink>
             )}

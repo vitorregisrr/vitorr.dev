@@ -18,6 +18,7 @@ module.exports = {
                 path: `${__dirname}/static/assets/img`
             }
         },
+        `gatsby-plugin-transition-link`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-react-helmet`, {
             resolve: `gatsby-plugin-prefetch-google-fonts`,

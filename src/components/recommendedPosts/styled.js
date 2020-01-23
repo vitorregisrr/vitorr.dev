@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Link} from "gatsby"
+import TransitionLink from '../TransitionLink/'
 import media from "styled-media-query"
 
 export const RecommendedWrapper = styled.section `
@@ -9,7 +9,7 @@ export const RecommendedWrapper = styled.section `
   display: flex;
 `
 
-export const RecommendedLink = styled(Link)`
+export const RecommendedLink = styled(TransitionLink)`
   align-items: center;
   background: var(--background);
   color: var(--texts);

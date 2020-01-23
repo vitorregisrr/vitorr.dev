@@ -1,5 +1,6 @@
 import React from 'react'
-import {useStaticQuery, Link} from 'gatsby'
+import {useStaticQuery} from 'gatsby'
+import TransitionLink from '../TransitionLink/'
 
 import Avatar from './Avatar'
 import * as S from './styled';
@@ -31,9 +32,9 @@ const Profile = () => {
 
     return (
         <S.ProfileWrapper>
-           <Link to="/">
+           <TransitionLink  to="/">
             <Avatar></Avatar>
-           </Link>
+           </TransitionLink>
            <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center'}}>
            <S.ProfileAuthor>
                 {title}

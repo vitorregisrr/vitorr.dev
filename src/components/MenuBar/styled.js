@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import media from "styled-media-query"
-import {Link} from 'gatsby'
+
+import TransitionLink from '../TransitionLink/'
 
 export const MenuBarWrapper = styled.aside `
     display: flex;
@@ -103,7 +104,7 @@ export const MenuBarItem = styled.span `
     `}
 `
 
-export const MenuBarLink = styled(Link)`
+export const MenuBarLink = styled(TransitionLink)`
     font-size: 0.5rem;
     display: block;
 

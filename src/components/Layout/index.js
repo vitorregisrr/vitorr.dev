@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {TransitionPortal} from 'gatsby-plugin-transition-link'
 
 import Profile from '../Profile'
 import SEO from '../SEO'
@@ -14,11 +15,15 @@ const Layout = ({seo, children}) => {
         <S.LayoutWrapper>
             <GlobalStyles/>
             <SEO {...seo}></SEO>
-            <Sidebar>
-                <Profile></Profile>
-            </Sidebar>
+            <TransitionPortal level="top">
+                <Sidebar>
+                    <Profile></Profile>
+                </Sidebar>
+            </TransitionPortal>
             <S.LayoutMain>{children}</S.LayoutMain>
-            <MenuBar></MenuBar>
+            <TransitionPortal level="top">
+                <MenuBar></MenuBar>
+            </TransitionPortal>
         </S.LayoutWrapper>
     )
 }

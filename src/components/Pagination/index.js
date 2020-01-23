@@ -1,17 +1,25 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import TransitionLink from '../TransitionLink/'
 import propTypes from 'prop-types';
 
 import * as S from './styled'
 
-const Pagination = ({isFirst, isLast, currentPage, numPages, prevPage, nextPage}) => {
+const Pagination = ({
+    isFirst,
+    isLast,
+    currentPage,
+    numPages,
+    prevPage,
+    nextPage
+}) => {
     return (
         <S.PaginationWrapper>
-            {!isFirst && <Link to={prevPage}>← página anterior</Link>}
+            {!isFirst && <TransitionLink to={prevPage}>← página anterior</TransitionLink>}
             <p>
-                {currentPage} de {numPages}
+                {currentPage}
+                de {numPages}
             </p>
-            {!isLast && <Link to={nextPage}>proxima página →</Link>}
+            {!isLast && <TransitionLink direction="right" to={nextPage}>proxima página →</TransitionLink>}
         </S.PaginationWrapper>
     )
 

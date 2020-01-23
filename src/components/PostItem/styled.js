@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import TransitionLink from '../TransitionLink/'
 import media from "styled-media-query"
 
-export const PostItemLink = styled(Link)`
+export const PostItemLink = styled(TransitionLink)`
   color: var(--texts);
   text-decoration: none;
   transition: all 0.4s;
