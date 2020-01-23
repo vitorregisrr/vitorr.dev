@@ -8,6 +8,10 @@ export const SearchWrapper = styled.section `
   width: 100%;
   transition: opacity 0.4s;
 
+  ${media.lessThan("large")`
+      padding-top: 1rem;
+  `}
+
   .ais-InstantSearch__root {
     display: flex;
     flex-direction: column;
