@@ -23,8 +23,8 @@ const MenuBar = () => {
             setDisplay(window.__display);
         }
         if (window.matchMedia('(max-width: 1170px)').matches) {
-            setDisplay('list');
-            window.__setPreferredDisplay('list');
+            setDisplay('grid');
+            window.__setPreferredDisplay('grid');
         }
 
     }, [])

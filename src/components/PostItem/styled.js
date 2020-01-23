@@ -94,6 +94,11 @@ export const PostItemTag = styled.div`
     min-width: auto;
     padding: .2rem .5rem;
     margin-bottom: .7rem;
+
+    body[data-display="grid"] & {
+      margin: 0 auto;
+      margin-bottom: 13px;
+    }
   `}
   
   body[data-display="grid"] & {
