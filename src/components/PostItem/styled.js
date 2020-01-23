@@ -8,6 +8,7 @@ export const PostItemLink = styled(TransitionLink)`
   text-decoration: none;
   transition: all 0.4s;
   overflow: hidden;
+  width: 100%;
 
   &:hover {
     color: #1fa1f2;

@@ -16,7 +16,7 @@ const PostItem = ({
 }) => {
     return (
         <ReactWOW animation='fadeInUp'>
-            <S.PostItemLink to={slug} image={image}>
+            <S.PostItemLink to={slug}>
                 <S.PostItemWrapper>
                     <S.PostItemTag background={background}>
                         <ReactWOW animation='zoomIn'>

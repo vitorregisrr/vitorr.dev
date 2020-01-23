@@ -75,6 +75,7 @@ export const SearchWrapper = styled.section `
       margin-top: 2rem;
     }
     .ais-Hits-item {
+      display: flex;
       background-color: var(--background);
     }
   }
