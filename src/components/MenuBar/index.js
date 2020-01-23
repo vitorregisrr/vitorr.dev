@@ -19,7 +19,14 @@ const MenuBar = () => {
         window.__onThemeChange = () => setTheme(window.__theme);
 
         setDisplay(window.__display);
-        window.__onDisplayChange = () => setTheme(window.__display);
+        window.__onDisplayChange = () => {
+            setDisplay(window.__display);
+        }
+        if (window.matchMedia('(max-width: 1170px)').matches) {
+            setDisplay('list');
+            window.__setPreferredDisplay('list');
+        }
+
     }, [])
 
     return (
@@ -62,7 +69,7 @@ const MenuBar = () => {
                     window.__setPreferredDisplay(isListMode
                         ? 'grid'
                         : 'list')
-                    }}>
+                }}>
 
                     {window.__display == 'list'
                         ? <Icons.Grid/>
