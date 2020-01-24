@@ -16,8 +16,7 @@ const Pagination = ({
         <S.PaginationWrapper>
             {!isFirst && <TransitionLink to={prevPage}>← página anterior</TransitionLink>}
             <p>
-                {currentPage}
-                de {numPages}
+                {currentPage} de {numPages}
             </p>
             {!isLast && <TransitionLink direction="right" to={nextPage}>proxima página →</TransitionLink>}
         </S.PaginationWrapper>
