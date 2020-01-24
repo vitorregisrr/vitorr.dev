@@ -8,7 +8,7 @@ module.exports = {
         position: `JS Full-Stack Developer`,
         description: `Um cantinho com alguns artigos meus sobre tecnologia e projetos que realizei como freelancer. `,
         author: `@vitorregisr`,
-        siteUrl: `https://www.vitorr.dev`
+        siteUrl: `https://www.vitorr.netlify.com`
     },
     plugins: [
         // needs to be the first one to work with gatsby-remark-images
@@ -87,6 +87,7 @@ module.exports = {
                 enablePartialsUpdates: true
             }
         },
+        `gatsby-plugin-netlify-cms`
         // this (optional) plugin enables Progressive Web App + Offline functionality To
         // learn more, visit: https://gatsby.dev/offline `gatsby-plugin-offline`,
     ]
