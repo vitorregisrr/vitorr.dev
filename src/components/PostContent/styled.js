@@ -44,8 +44,9 @@ export const PostDescription = styled.h2`
 export const PostDate = styled.p`
   font-size: 0.8rem;
   letter-spacing: 1.2px;
-  font-weight: 100;
+  font-weight: 500;
   padding: 0 1.4rem;
+  margin-bottom: -7px;
 
   ${media.lessThan("large")`
     padding: 0 1rem;
@@ -75,7 +76,7 @@ export const MainContent = styled.section`
   .button-post {
     color: var(--texts);
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.9;
     letter-spacing: 0.053rem;
     padding: 0 1.4rem;
