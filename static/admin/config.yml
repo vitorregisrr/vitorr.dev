@@ -2,7 +2,7 @@ backend:
   name: github
   repo: vitorregisrr/vitorr.dev
   branch: master
-  site_domain: https://www.vitorr.netlify.com
+  site_domain: vitorr.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
