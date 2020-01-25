@@ -1,9 +1,10 @@
 backend:
   name: github
   repo: vitorregisrr/vitorr.dev
-  branch: master
+  branch: production
   site_domain: vitorr.netlify.com
 
+locale: pt
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
 public_folder: "/assets/img"
