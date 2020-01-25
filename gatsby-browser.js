@@ -1,3 +1,3 @@
 import 'lazysizes'
+require("prismjs/themes/prism-tomorrow.css")
 require('animate.css')
-require("prismjs/themes/prism-okaidia.css");
