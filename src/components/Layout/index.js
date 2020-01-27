@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import IdentityModal, { useIdentityContext } from "react-netlify-identity-widget"
+import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
 import {TransitionPortal} from 'gatsby-plugin-transition-link'
 
 import Profile from '../Profile'
@@ -10,6 +12,8 @@ import Sidebar from '../Sidebar'
 import MenuBar from '../MenuBar'
 
 const Layout = ({seo, children}) => {
+    const identity = useIdentityContext()
+    const [dialog, setDialog] = React.useState(false)
 
     return (
         <S.LayoutWrapper>
@@ -24,6 +28,7 @@ const Layout = ({seo, children}) => {
             <TransitionPortal level="top">
                 <MenuBar></MenuBar>
             </TransitionPortal>
+            <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
         </S.LayoutWrapper>
     )
 }

@@ -1,6 +1,4 @@
 require('dotenv').config()
-
-
 const algoliaQueries = require('./src/utils/algolia_queries')
 
 module.exports = {
@@ -45,6 +43,12 @@ module.exports = {
                 path: `${__dirname}/data/posts`
             }
         }, {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `pages`,
+                path: `${__dirname}/data/contents`
+            }
+        }, {
             resolve: 'gatsby-transformer-remark',
             plugins: [
                 {
@@ -61,6 +65,11 @@ module.exports = {
                 `gatsby-remark-lazy-load`,
                 `gatsby-remark-prismjs`
             ]
+        }, {
+            resolve: `gatsby-plugin-netlify-identity`,
+            options: {
+                url: `https://vitorr.netlify.com/` // required!
+            }
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`, {
@@ -76,8 +85,7 @@ module.exports = {
             }
         },
         `gatsby-plugin-sitemap`,
-        `gatsby-plugin-offline`,
-        {
+        `gatsby-plugin-offline`, {
             resolve: `gatsby-plugin-algolia-search`,
             options: {
                 appId: process.env.GATSBY_ALGOLIA_APP_ID,
