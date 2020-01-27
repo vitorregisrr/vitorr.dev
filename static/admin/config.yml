@@ -29,12 +29,12 @@ collections:
           { label: 'misc', value: '#7AAB13' }
         ]}
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "pages"
-    label: "Pages"
+  - name: "contents"
+    label: "Conteúdos"
     files:
       - label: "Sidebar"
         name: "sidebar"
-        file: "data/contents/sidebar.yml"
+        file: "data/contents/sidebar.md"
         fields:
           - {label: Nome, name: nome, widget: string}
           - {label: Ocupation, name: ocupation, widget: string}
