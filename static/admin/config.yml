@@ -38,4 +38,4 @@ collections:
         fields:
           - {label: Nome, name: nome, widget: string}
           - {label: Ocupation, name: ocupation, widget: string}
-          - {label: About, name: about, widget: markdown}
+          - {label: About, name: about, widget: string}

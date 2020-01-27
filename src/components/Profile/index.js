@@ -9,42 +9,44 @@ import MenuLinks from './MenuLinks';
 
 const Profile = () => {
 
-    const {
-        site: {
-            siteMetadata: {
-                title,
-                description,
-                position
-            }
-        }
-    } = useStaticQuery(graphql `
-            query MySiteMetaData {
-                    site{
-                        siteMetadata {
-                        author
-                        description,
-                        position,
-                        title
+    const query = useStaticQuery(graphql `
+        {
+            allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(contents)/.*.md$/"}}) {
+                edges {
+                    node {
+                        frontmatter {
+                            about
+                            nome
+                            ocupation
+                        }
                     }
                 }
             }
+        }
         `);
+
+    const {about, ocupation, nome} = query.allMarkdownRemark.edges[0].node.frontmatter
 
     return (
         <S.ProfileWrapper>
-           <TransitionLink  to="/">
-            <Avatar></Avatar>
-           </TransitionLink>
-           <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center'}}>
-           <S.ProfileAuthor>
-                {title}
-            </S.ProfileAuthor>
-            <S.ProfilePosition>
-                {position}
-            </S.ProfilePosition>
-           </div>
+            <TransitionLink to="/">
+                <Avatar></Avatar>
+            </TransitionLink>
+            <div
+                style={{
+                'display': 'flex',
+                'flexDirection': 'column',
+                'justifyContent': 'center'
+            }}>
+                <S.ProfileAuthor>
+                    {nome}
+                </S.ProfileAuthor>
+                <S.ProfilePosition>
+                    {ocupation}
+                </S.ProfilePosition>
+            </div>
             <S.ProfileDescription>
-                {description}
+                <div dangerouslySetInnerHTML={{ __html: about }}></div>
             </S.ProfileDescription>
 
             <SocialLinks></SocialLinks>
