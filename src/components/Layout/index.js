@@ -13,7 +13,7 @@ import MenuBar from '../MenuBar'
 
 const Layout = ({seo, children}) => {
     const identity = useIdentityContext()
-    const [dialog, setDialog] = React.useState(true)
+    const [dialog, setDialog] = React.useState(false)
 
     return (
         <S.LayoutWrapper>
