@@ -16,7 +16,25 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Merriweather', serif;
+    background-color: ${(props) => props.theme.colors.background};
+    transition: background-color 0.5s ease-in;
+
+    --c-l-primary: #FFC117;
+    --c-l-secondary: #FFD768;
+    --c-l-terc: #FFDF87;
+    --c-l-light: #FFF9F0;
+    --c-l-dark: #190122;
+    --c-l-dark-2: #320B41;
+    --c-l-text: #190122;
+  
+    --c-d-primary: #D9B6FF;
+    --c-d-secondary: #2B1533;
+    --c-d-terc: #2B1533;
+    --c-d-light: #2B1533;
+    --c-d-dark: #190122;
+    --c-d-dark-2: #320B41;
+    --c-d-text: #FFFFFF;
   }
 `
 

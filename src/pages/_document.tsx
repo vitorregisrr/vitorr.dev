@@ -38,6 +38,13 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* @ts-expect-error crossOrigin is invalid prop for TS */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap"
+          rel="stylesheet"
+        />
         <body>
           <Main />
           <NextScript />
