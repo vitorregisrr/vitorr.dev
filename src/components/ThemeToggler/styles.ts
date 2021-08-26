@@ -4,13 +4,13 @@ export const ThemeTogglerWrapper = styled.button`
   position: absolute;
   right: 0;
   top: 0;
-  width: 70px;
-  height: 70px;
+  width: 63px;
+  height: 63px;
   padding: 0;
   margin: 0;
-  background-color: ${(props) => props.theme.colors.background_opos};
   cursor: pointer;
-  border: none;
+  border: none !important;
+  background-color: ${(props) => props.theme.colors.background_opos};
   transition: background-color 0.5s ease-in;
 `
 
@@ -32,7 +32,7 @@ export const ThemeTogglerIcon = styled.div`
     }
 
     img {
-      width: 35px;
+      width: 34px;
     }
   }
 `
