@@ -49,7 +49,6 @@ const Sidebar = ({ currentIndex, moveFullpage }: SidebarProps) => {
       <S.SidebarContent>
         {sidebarItems.map((item, index) => (
           <S.SidebarItem
-            // @ts-ignore
             isActive={currentIndex === index}
             onClick={() => onItemClick(index)}
             key={index}

@@ -68,11 +68,11 @@ export const SidebarItemLabel = styled.span`
   }
 `
 
-type SidebarItemProps = {
+interface SidebarItemProps {
   isActive: boolean
 }
 
-export const SidebarItem = styled.li`
+export const SidebarItem = styled.li<SidebarItemProps>`
   position: relative;
   margin-bottom: 41px;
   transition: transform 0.3s;
@@ -88,14 +88,13 @@ export const SidebarItem = styled.li`
     }
   }
 
-  /* @ts-ignore */
-  ${({ isActive }: SidebarItemProps) =>
-    isActive &&
+  ${(props) =>
+    props.isActive &&
     `
     & > ${SidebarItemLabel}{
       opacity: 1;
-      background-color: ${(props) => props.theme.colors.primary};
-   }`}
+      background-color: ${props.theme.colors.background_opos};
+    }`}
 
   svg,
   path {
