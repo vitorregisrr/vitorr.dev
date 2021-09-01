@@ -26,7 +26,7 @@ const ThemeToggler = ({ toggleTheme }: ThemeTogglerProps) => {
   const SunIco = () => (
     <Image
       src="/img/sun2.svg"
-      blurDataURL="/img/moon.svg"
+      blurDataURL="/img/sun2.svg"
       placeholder="blur"
       alt="Sun icon"
       height={60}

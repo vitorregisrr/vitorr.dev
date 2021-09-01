@@ -1,3 +1,5 @@
+import HomeTemplate from 'templates/home'
+
 export default function Home() {
-  return <></>
+  return <HomeTemplate />
 }

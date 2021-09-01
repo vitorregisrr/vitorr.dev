@@ -46,8 +46,8 @@ function App({ Component, pageProps, router }: AppProps) {
       </Head>
 
       <GlobalStyles />
-      <main>
-        <ThemeToggler key={isMounted + '0'} toggleTheme={toggleTheme} />
+      <main key={isMounted + '0'}>
+        <ThemeToggler toggleTheme={toggleTheme} />
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>

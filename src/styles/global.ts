@@ -18,7 +18,8 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Merriweather', serif;
     background-color: ${(props) => props.theme.colors.background};
-    transition: background-color 0.5s ease-in;
+    color: ${(props) => props.theme.colors.background_opos};
+    transition: background-color 0.5s ease-in-out;
 
     --c-l-primary: #FFC117;
     --c-l-secondary: #FFD768;
