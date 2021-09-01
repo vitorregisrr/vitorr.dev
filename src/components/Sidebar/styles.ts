@@ -88,6 +88,7 @@ export const SidebarItem = styled.li`
     }
   }
 
+  /* @ts-ignore */
   ${({ isActive }: SidebarItemProps) =>
     isActive &&
     `
