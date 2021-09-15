@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import Sidebar from 'components/Sidebar'
 import ReactFullpage from '@fullpage/react-fullpage'
 
-import HomeTemplate from '../Homee'
+import HomeTemplate from '../Home'
 import SkillsTemplate from '../Skills'
 import PastTemplate from '../Past'
 import PortfolioTemplate from '../Portfolio'
