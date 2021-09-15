@@ -11,7 +11,7 @@ import DarkTheme from 'styles/themes/dark'
 import GlobalStyles from 'styles/global'
 
 function App({ Component, pageProps, router }: AppProps) {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', LightTheme)
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', DarkTheme)
   const [isMounted, setMounted] = useState(false)
 
   useEffect(() => {

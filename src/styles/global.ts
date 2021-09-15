@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.background_opos};
     transition: background-color 0.5s ease-in-out;
+    font-size: 16px;
 
     --c-l-primary: #FFC117;
     --c-l-secondary: #FFD768;
@@ -36,6 +37,42 @@ const GlobalStyles = createGlobalStyle`
     --c-d-dark: #190122;
     --c-d-dark-2: #320B41;
     --c-d-text: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, p, span{
+    transition: color 0.5s ease-in-out;
+  }
+
+  *{
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background-color: ${(props) => props.theme.colors.background_opos};
+      transition: background-color 0.5s ease-in-out;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background-color: ${(props) => props.theme.colors.background};
+      border-radius: 15px;
+      border: 2px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+      transition: background-color 0.5s ease-in-out;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    }
+
+    .iScrollIndicator{
+      background-color: ${(props) =>
+        props.theme.title === `light`
+          ? `rgba(0,0,0,.65)`
+          : `rgba(250,250,250,.4)`} !important;
+      opacity: .5;
+      transition: all 0.4s;
+    }
   }
 `
 

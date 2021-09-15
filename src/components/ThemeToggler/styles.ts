@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ThemeTogglerWrapper = styled.button`
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   width: 63px;
@@ -10,6 +10,7 @@ export const ThemeTogglerWrapper = styled.button`
   margin: 0;
   cursor: pointer;
   border: none !important;
+  outline: none !important;
   background-color: ${(props) => props.theme.colors.background_opos};
   transition: background-color 0.5s ease-in-out;
   z-index: 1000;

@@ -88,16 +88,16 @@ export const SidebarItem = styled.li<SidebarItemProps>`
     }
   }
 
-  ${(props) =>
-    props.isActive &&
-    `
-    & > ${SidebarItemLabel}{
+  &:hover {
+    & > ${SidebarItemLabel} {
       opacity: 1;
-      background-color: ${props.theme.colors.background_opos};
-    }`}
+      background-color: ${(props) => props.theme.colors.background_opos};
+    }
+  }
 
   svg,
   path {
+    opacity: 0.5;
     width: 100%;
     transition: all 0.5s ease-in-out;
 
@@ -105,6 +105,19 @@ export const SidebarItem = styled.li<SidebarItemProps>`
       width: 30px;
     }
   }
+
+  ${(props) =>
+    props.isActive &&
+    `
+    svg, path{
+      opacity: 1;
+    }
+    
+    &:first-child ${SidebarItemLabel} {
+      opacity: 1;
+      background-color: ${props.theme.colors.background_opos};
+    }
+    `}
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0;
