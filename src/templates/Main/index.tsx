@@ -12,7 +12,7 @@ import ContactTemplate from '../Contact'
 import * as S from './styles'
 
 const pluginWrapper = () => {
-  require('../../statics/scrolloverflow.min')
+  require('../../statics/scrolloverflow.js')
 }
 
 const MainTemplate = () => {
