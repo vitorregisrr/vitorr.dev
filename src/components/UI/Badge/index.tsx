@@ -13,7 +13,6 @@ const S = {
       props.theme.title === `light`
         ? props.theme.colors.background_opos
         : props.theme.colors.background};
-    width: auto;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: 600;

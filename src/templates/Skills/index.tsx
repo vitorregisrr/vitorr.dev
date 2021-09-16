@@ -64,8 +64,8 @@ const SkillsTemplate = () => {
 
               <p>
                 <b>Main lnterpersonal skills </b>
-                Leadership, engagement, creativity, large vision, pacience,
-                oratory, empathy, determination and communication.
+                Leadership, creativity, engagement, autonomy, patience, oratory,
+                empathy, determined and communication.
               </p>
             </S.SkillsParagraph>
           </Box>

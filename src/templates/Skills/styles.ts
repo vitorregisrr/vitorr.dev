@@ -19,6 +19,9 @@ export const SkillsWrapper = styled.section`
 `
 
 export const SkillsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 40px 0;
 
   @media screen and (max-width: 768px) {

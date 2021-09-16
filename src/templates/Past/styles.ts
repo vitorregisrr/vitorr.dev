@@ -11,4 +11,9 @@ export const PastWrapper = styled.section`
   margin-bottom: 30px;
   width: 100%;
   overflow-x: hidden;
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 25px 0 25px;
+    margin-bottom: 45px;
+  }
 `
