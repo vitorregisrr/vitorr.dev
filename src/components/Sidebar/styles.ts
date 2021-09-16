@@ -31,6 +31,8 @@ export const SidebarContent = styled.ul`
 
   @media screen and (max-width: 768px) {
     flex-direction: row;
+    justify-content: space-around;
+    padding: 0 35px;
   }
 `
 
@@ -65,6 +67,10 @@ export const SidebarItemLabel = styled.span`
     border-bottom: 13px solid transparent;
     border-right: 28px solid ${(props) => props.theme.colors.background_opos};
     transition: all 0.45s ease-in;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `
 

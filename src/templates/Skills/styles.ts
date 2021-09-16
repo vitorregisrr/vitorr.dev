@@ -11,14 +11,29 @@ export const SkillsWrapper = styled.section`
   margin-bottom: 30px;
   width: 100%;
   overflow-x: hidden;
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 25px 0 25px;
+    margin-bottom: 45px;
+  }
 `
 
 export const SkillsSection = styled.section`
   padding: 40px 0;
+
+  @media screen and (max-width: 768px) {
+    label {
+      margin-bottom: 25px;
+    }
+  }
 `
 
 export const SkillsParagraph = styled.div`
   padding-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+  }
 
   p {
     font-size: 1.6rem;

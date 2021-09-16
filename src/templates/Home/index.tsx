@@ -72,7 +72,7 @@ const HomeTemplate = ({ moveFullpage }: HomeTemplateProps) => {
         <S.HomeCaptionTitle>
           Hey there! My name is{' '}
           <span className="highlight">Vitor Régis de Ramos</span> and I&apos;m a
-          <span className="highlight">Creative Software Engineer</span>. 🦅
+          <span className="highlight"> Creative Software Engineer</span>. 🦅
         </S.HomeCaptionTitle>
         <S.HomeCaptionParagraph>
           I&apos;m a software engineer with almost five years of experience

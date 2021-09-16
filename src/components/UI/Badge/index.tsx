@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const S = {
   Badge: styled.label`
+    display: block;
     font-size: 2rem;
     padding: 10px 24px;
     background-color: ${(props) =>

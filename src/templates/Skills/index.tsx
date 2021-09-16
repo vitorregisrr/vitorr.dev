@@ -1,7 +1,7 @@
 import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 import { Flex, Box } from 'rebass'
 import MainHeader from 'components/Header'
-import { ThemeContext } from 'styled-components'
 
 import * as S from './styles'
 import { Badge } from 'components/UI'
@@ -15,8 +15,8 @@ const SkillsTemplate = () => {
       <MainHeader
         ico={<Sparkles color={colors.primary} />}
         title={`My skills/knowledge`}
-        subtitle={`How can i help you :)`}
-        description={`I'm the person who will take your project from the scratch and
+        subtitle={`How i can help you!`}
+        description={`I'm the person to take your project from the scratch and
         transform it into a real, beautiful, performative, fluid and animated application.
         Fully of life and the essence of your business. 🤍 `}
       />
@@ -24,8 +24,8 @@ const SkillsTemplate = () => {
       <S.SkillsSection>
         <Badge>Thechnical Knowledge</Badge>
 
-        <Flex>
-          <Box width={1 / 2} p={3}>
+        <Flex flexWrap="wrap">
+          <Box width={[1, 1 / 2]} p={[0, 3]}>
             <S.SkillsParagraph>
               <p>
                 <b>Main Technologies </b>
@@ -44,7 +44,7 @@ const SkillsTemplate = () => {
               </p>
             </S.SkillsParagraph>
           </Box>
-          <Box width={1 / 2} p={3}>
+          <Box width={[1, 1 / 2]} p={[0, 3]}>
             <S.SkillsParagraph>
               <p>
                 <b>Design tools and softwares </b>
@@ -64,8 +64,8 @@ const SkillsTemplate = () => {
 
               <p>
                 <b>Main lnterpersonal skills </b>
-                Leadership, visionary, patience, oratory, empathy, creativity,
-                determination and communication.
+                Leadership, engagement, creativity, large vision, pacience,
+                oratory, empathy, determination and communication.
               </p>
             </S.SkillsParagraph>
           </Box>
