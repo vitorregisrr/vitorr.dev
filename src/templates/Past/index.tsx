@@ -1,5 +1,7 @@
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
+import { Flex, Box } from 'rebass'
+import { Badge } from 'components/UI'
 
 import MainHeader from 'components/Header'
 import { Clock } from 'components/UI/ico'
@@ -17,6 +19,74 @@ const PastTemplate = () => {
         subtitle={`The journey i've lived to be where i'm now.`}
         description={``}
       />
+
+      <S.PastSection>
+        <Flex flexWrap="wrap">
+          <Box width={[1]}>
+            <S.PastParagraph>
+              <p>
+                <b>Evolve Studio (MAR 2019 - present)</b>
+                <b>
+                  as{' '}
+                  <Badge size={`small`}>
+                    {' '}
+                    founder &amp; full-stack engineer
+                  </Badge>
+                </b>
+                Evolve is a brand idealized and founded by me to meet freelance
+                demands for project development with modem tech­nologies.
+                I&apos;m responsible for the management and tech leadership of
+                the projects, team, technologies and i also develop full-stack.
+              </p>
+              <p>
+                <b>Sorocabacom (JAN 2019 -JAN 2020)</b>
+                <b>
+                  as <Badge size={`small`}>front-end developer </Badge>
+                </b>
+                Developing, replication and maintenance of a great diversity of
+                web elements (ecommerces, platforms, landing pages,
+                institutional websites, etc) in high agency demand flow.
+                Tecnologies used: React, Graphql, Next, Gatsby, etc.
+              </p>
+
+              <p>
+                <b>IFSUL Campus (May 2018 - DEC 2018)</b>
+                <b>
+                  as <Badge size={`small`}>game developer</Badge>
+                </b>
+                Creative idealization and developing of 2D educative games with
+                Phaser.js and an online education platform with React.js and
+                Node.js.
+              </p>
+              <p>
+                <b>Freelancer (DEC 2017 - DEC 2018) </b>
+                <b>
+                  as <Badge size={`small`}>full-stack developer</Badge>
+                </b>
+                Developing of a great diversity of websites with HTML, SCSS,
+                automation toolkits like Gulp, Webpack, etc and a lot of
+                JavaScript for web and for back-end with NodeJS.
+              </p>
+              <p>
+                <b>Inove Comunicação Visual (APR 2018 - DEC 2018) </b>
+                <b>
+                  as <Badge size={`small`}>art finalist (designer)</Badge>
+                </b>
+                Creation of design materiais, for online and offline
+                publication. (Photoshop, lllustrator, Adobe XD, etc).
+              </p>
+              <p>
+                <b>VOLUNTARIEER </b>
+                <b>Rotaract Bagé (AUG 2011 - Nov 2018)</b>
+                <b>
+                  as <Badge size={`small`}>public image director</Badge>{' '}
+                </b>
+                Poverty Alleviation and community helping.{' '}
+              </p>
+            </S.PastParagraph>
+          </Box>
+        </Flex>
+      </S.PastSection>
     </S.PastWrapper>
   )
 }

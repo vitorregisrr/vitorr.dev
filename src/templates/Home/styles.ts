@@ -103,13 +103,31 @@ export const HomeCaptionTitle = styled.h1`
   font-weight: 400;
 
   @media screen and (max-width: 768px) {
-    font-size: 2.4rem;
+    font-size: 1.9rem;
   }
 
   .highlight {
     font-weight: 700;
     color: ${(props) => props.theme.colors.primary};
-    display: inline;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2.4rem;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .c-p {
+    color: ${(props) => props.theme.colors.background_opos} !important;
+  }
+
+  br {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 `
 

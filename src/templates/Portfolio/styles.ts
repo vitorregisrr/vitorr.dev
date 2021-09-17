@@ -7,8 +7,8 @@ export const PortfolioWrapper = styled.section`
   margin: 0 auto;
   padding-top: 62px;
   padding-left: 130px;
-  padding-right: 230px;
-  margin-bottom: 30px;
+  padding-right: 100px;
+  margin-bottom: 40px;
   width: 100%;
   overflow-x: hidden;
 
@@ -17,3 +17,5 @@ export const PortfolioWrapper = styled.section`
     margin-bottom: 45px;
   }
 `
+
+export const PortfolioSection = styled.section``
