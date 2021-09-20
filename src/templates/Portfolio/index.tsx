@@ -11,8 +11,8 @@ import Card from 'components/UI/Card'
 type PortfolioItem = {
   image: string
   imageAlt: string
-  title?: string
-  link?: string
+  title: string
+  link: string
 }
 
 const PortfolioTemplate = () => {
@@ -50,6 +50,7 @@ const PortfolioTemplate = () => {
       link: 'https://chiquinhobrandao.com.br/santoantonio/'
     },
     {
+      title: 'Website Francisco Brandão',
       image: '/img/portfolio/francisco-brandao.png',
       imageAlt: 'Website Francisco Brandão',
       link: 'https://chiquinhobrandao.com.br/'
@@ -187,22 +188,29 @@ const PortfolioTemplate = () => {
       <MainHeader
         ico={<List color={colors.primary} />}
         title={`My Portfolio`}
-        subtitle={`Projects i've been working on.`}
+        subtitle={`Some projects i've been working on.`}
         description={``}
       />
 
       <S.PortfolioSection>
         <Flex flexWrap="wrap">
-          {portfolioData.map(({ image, imageAlt }: PortfolioItem, index) => (
-            <Box
-              key={index}
-              width={[1, 1 / 2, 1 / 2, 1 / 3]}
-              px={[0, 3]}
-              py={[3, 3]}
-            >
-              <Card image={image} imageAlt={imageAlt} />
-            </Box>
-          ))}
+          {portfolioData.map(
+            ({ image, imageAlt, link, title }: PortfolioItem, index) => (
+              <Box
+                key={index}
+                width={[1, 1 / 2, 1 / 2, 1 / 3]}
+                px={[0, 3]}
+                py={[3, 3]}
+              >
+                <Card
+                  link={link}
+                  title={title}
+                  image={image}
+                  imageAlt={imageAlt}
+                />
+              </Box>
+            )
+          )}
         </Flex>
       </S.PortfolioSection>
     </S.PortfolioWrapper>

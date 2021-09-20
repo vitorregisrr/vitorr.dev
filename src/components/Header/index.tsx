@@ -5,12 +5,19 @@ type MainHeaderProps = {
   title: string
   subtitle: string
   description: string
+  align?: string
 }
 
-const MainHeader = ({ ico, title, subtitle, description }: MainHeaderProps) => {
+const MainHeader = ({
+  ico,
+  title,
+  subtitle,
+  description,
+  align
+}: MainHeaderProps) => {
   return (
     <S.MainHeaderWrapper>
-      <S.MainHeaderContent>
+      <S.MainHeaderContent align={align}>
         <S.MainHeaderTop>
           <div className="ico">{ico}</div>
           <div className="content">

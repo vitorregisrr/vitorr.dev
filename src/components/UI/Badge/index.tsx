@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 type BadgeProps = {
   children: React.ReactNode
-  size: string
+  size?: string
 }
 
 const S = {

@@ -32,25 +32,41 @@ export const HomeImage = styled.div`
   .top-img {
     position: absolute;
     left: 50%;
-    top: -50px;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 
     &.eagle {
-      width: 125px;
-      top: -85px;
+      & > div {
+        position: absolute;
+        left: 50%;
+        top: -190px;
+        transform: translateX(-50%);
+        width: 125px;
 
-      @media screen and (max-width: 768px) {
-        top: -73px;
-        width: 100px;
+        @media screen and (max-width: 768px) {
+          top: -145px;
+          width: 100px;
+        }
       }
     }
 
     &.coruja {
-      width: 155px;
-      top: -60px;
+      & > div {
+        position: absolute;
+        left: 50%;
+        top: -170px;
+        transform: translateX(-50%);
+        width: 155px;
 
-      @media screen and (max-width: 768px) {
-        width: 145px;
+        @media screen and (max-width: 768px) {
+          top: -132px;
+          left: 10px;
+
+          div,
+          img {
+            width: 134px;
+          }
+        }
       }
     }
   }
@@ -58,25 +74,38 @@ export const HomeImage = styled.div`
   .background-img {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 100%;
     transform: translate(-50%, -50%);
 
     &.sun {
-      width: 320px;
-      z-index: 1;
+      & > div {
+        position: absolute;
+        left: 50%;
+        top: -100px;
+        transform: translate(-50%, -50%);
+        width: 320px;
+        z-index: 1;
 
-      @media screen and (max-width: 768px) {
-        width: 220px;
+        @media screen and (max-width: 768px) {
+          width: 240px;
+          top: -70px;
+        }
       }
     }
 
     &.moon {
-      width: 270px;
-      z-index: 1;
-      top: 75%;
+      & > div {
+        position: absolute;
+        left: 50%;
+        top: -50px;
+        width: 270px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
 
-      @media screen and (max-width: 768px) {
-        width: 190px;
+        @media screen and (max-width: 768px) {
+          top: -30px;
+          width: 190px;
+        }
       }
     }
   }
@@ -109,6 +138,7 @@ export const HomeCaptionTitle = styled.h1`
   .highlight {
     font-weight: 700;
     color: ${(props) => props.theme.colors.primary};
+    text-shadow: 0.2px 0.2px 0px rgba(0, 0, 0, 0.3);
 
     @media screen and (max-width: 768px) {
       display: block;
@@ -168,6 +198,7 @@ export const HomeLinksItem = styled.a`
   margin-left: 10px;
   font-weight: 700;
   color: ${(props) => props.theme.colors.primary};
+  text-shadow: 0.2px 0.2px 0px rgba(0, 0, 0, 0.3);
   text-decoration: underline;
   font-size: 2.4rem;
   cursor: pointer;

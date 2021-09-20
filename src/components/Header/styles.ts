@@ -4,11 +4,23 @@ export const MainHeaderWrapper = styled.header`
   width: 100%;
 `
 
-export const MainHeaderContent = styled.div`
+type MainHeaderContentProps = {
+  align?: string
+}
+
+export const MainHeaderContent = styled.div<MainHeaderContentProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
+
+  ${(props) =>
+    props.align === `center` &&
+    `
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  `}
 `
 
 export const MainHeaderTop = styled.div`

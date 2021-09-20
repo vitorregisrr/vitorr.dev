@@ -25,7 +25,7 @@ export const CardWrapper = styled.article`
   overflow: hidden;
   transition: transform 0.3s;
   cursor: pointer;
-  box-shadow: 0.4px 0.4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.4px 0.4px 15px rgba(0, 0, 0, 0.15);
 
   @media screen and (max-width: 768px) {
     height: 190px;
@@ -37,5 +37,26 @@ export const CardWrapper = styled.article`
 
   &:hover {
     transform: scale(1.05);
+  }
+`
+
+export const CardCaption = styled.div`
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 10px 13px;
+  color: #fff;
+  background: linear-gradient(
+    0deg,
+    rgba(14, 1, 22, 1) 20%,
+    rgba(8, 1, 1, 0) 100%
+  );
+
+  .title {
+    font-weight: 400;
   }
 `

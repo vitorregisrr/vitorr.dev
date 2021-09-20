@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import * as S from './styles'
+import * as animations from './animations'
 
 type HomeTemplateProps = {
   moveFullpage: (index: number) => void
@@ -14,28 +16,6 @@ const HomeTemplate = ({ moveFullpage }: HomeTemplateProps) => {
   return (
     <S.HomeWrapper>
       <S.HomeImage>
-        {title === 'light' ? (
-          <div className="top-img eagle">
-            <Image
-              src="/img/shapes/eagle.svg"
-              blurDataURL="/img/shapes/eagle.svg"
-              placeholder="blur"
-              width={165}
-              height={92}
-            />
-          </div>
-        ) : (
-          <div className="top-img coruja">
-            <Image
-              src="/img/shapes/coruja.svg"
-              blurDataURL="/img/shapes/coruja.svg"
-              placeholder="blur"
-              width={181}
-              height={50}
-            />
-          </div>
-        )}
-
         <div className="profile-img">
           <Image
             src="/img/shapes/profile.svg"
@@ -46,27 +26,77 @@ const HomeTemplate = ({ moveFullpage }: HomeTemplateProps) => {
           />
         </div>
 
-        {title === 'light' ? (
-          <div className="background-img sun">
-            <Image
-              src="/img/shapes/sun.svg"
-              blurDataURL="/img/shapes/sun.svg"
-              placeholder="blur"
-              width={381}
-              height={355}
-            />
-          </div>
-        ) : (
-          <div className="background-img moon">
-            <Image
-              src="/img/shapes/moon.svg"
-              blurDataURL="/img/shapes/moon.svg"
-              placeholder="blur"
-              width={325}
-              height={260}
-            />
-          </div>
-        )}
+        <AnimatePresence>
+          {title === 'light' ? (
+            <motion.div
+              {...animations.eagle}
+              key="eagle"
+              className="top-img eagle"
+            >
+              <div>
+                <Image
+                  src="/img/shapes/eagle.svg"
+                  blurDataURL="/img/shapes/eagle.svg"
+                  placeholder="blur"
+                  width={165}
+                  height={92}
+                />
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              {...animations.coruja}
+              key="coruja"
+              className="top-img coruja"
+            >
+              <div>
+                <Image
+                  src="/img/shapes/coruja.svg"
+                  blurDataURL="/img/shapes/coruja.svg"
+                  placeholder="blur"
+                  width={181}
+                  height={50}
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {title === 'light' ? (
+            <motion.div
+              {...animations.sun}
+              className="background-img sun"
+              key="sun"
+            >
+              <div>
+                <Image
+                  src="/img/shapes/sun.svg"
+                  blurDataURL="/img/shapes/sun.svg"
+                  placeholder="blur"
+                  width={381}
+                  height={355}
+                />
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              {...animations.moon}
+              key="moon"
+              className="background-img moon"
+            >
+              <div>
+                <Image
+                  src="/img/shapes/moon.svg"
+                  blurDataURL="/img/shapes/moon.svg"
+                  placeholder="blur"
+                  width={325}
+                  height={260}
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </S.HomeImage>
       <S.HomeCaption>
         <S.HomeCaptionTitle>
