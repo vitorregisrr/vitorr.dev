@@ -34,6 +34,10 @@ export const ContactLink = styled.a`
   font-size: 2rem;
   transition: all 0.25s ease-in;
 
+  @media screen and (max-width: 768px) {
+    font-size: 1.7rem;
+  }
+
   svg,
   path {
     margin-right: 10px;

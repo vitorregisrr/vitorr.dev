@@ -200,7 +200,7 @@ const PortfolioTemplate = () => {
                 key={index}
                 width={[1, 1 / 2, 1 / 2, 1 / 3]}
                 px={[0, 3]}
-                py={[3, 3]}
+                py={[2, 3]}
               >
                 <Card
                   link={link}

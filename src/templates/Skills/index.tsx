@@ -15,7 +15,7 @@ const SkillsTemplate = () => {
       <MainHeader
         ico={<Sparkles color={colors.primary} />}
         title={`My skills / knowledge`}
-        subtitle={`How i can help you!`}
+        subtitle={`How i will help you.`}
         description={`I'm the person to take your project from the scratch and
         transform it into a real, beautiful, performative, fluid and animated application.
         Fully of life and the essence of your business. 🤍 `}

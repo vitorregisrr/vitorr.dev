@@ -142,6 +142,7 @@ export const HomeCaptionTitle = styled.h1`
 
     @media screen and (max-width: 768px) {
       display: block;
+      text-shadow: 0.1px 0.1px 0px rgba(0, 0, 0, 0.1);
 
       @media screen and (max-width: 768px) {
         font-size: 2.4rem;
