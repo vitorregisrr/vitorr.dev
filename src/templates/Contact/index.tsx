@@ -22,7 +22,10 @@ const ContactTemplate = () => {
 
       <S.ContactSection>
         <S.ContactLinks>
-          <S.ContactLink target="_blank" href="mailto:contact@vitorr.dev">
+          <S.ContactLink
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5553997083545&text=Hey!%20I'm%20coming%20from%20vitorr.dev%20and..."
+          >
             <Whatsapp size={33} fill={colors.background_opos} />
             +55 (53) 99708-3545
           </S.ContactLink>
