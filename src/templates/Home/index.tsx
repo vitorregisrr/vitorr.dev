@@ -104,15 +104,15 @@ const HomeTemplate = ({ moveFullpage }: HomeTemplateProps) => {
           <span className="highlight">Vitor Régis de Ramos</span> and I&apos;m a
           <span className="highlight">
             {' '}
-            Creative Software Engineer <span className="c-p">.</span> 🦅
+            Creative Software Developer <span className="c-p">.</span> 🦅
           </span>
         </S.HomeCaptionTitle>
         <S.HomeCaptionParagraph>
-          I&apos;m a software engineer with almost five years of experience
-          developing front-end and back-end and now focused on front-end, web
-          and creative stuff. I also have experience with management of
-          international teams as a tech leader and trust in give my better to
-          every place/project I am in!
+          I&apos;m a software developer with almost five years of experience
+          developing front-end and back-end and now focused on web and creative
+          stuff. I&apos;m also experienced in management of international teams
+          as a tech leader and trust in giving my better to every place/project
+          I am being part of!
           <br /> Lets build something awesome together? ✨
         </S.HomeCaptionParagraph>
       </S.HomeCaption>

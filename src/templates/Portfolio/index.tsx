@@ -20,6 +20,12 @@ const PortfolioTemplate = () => {
 
   const portfolioData: PortfolioItem[] = [
     {
+      title: 'Portal Floresta.TV',
+      image: '/img/portfolio/florestatv.png',
+      imageAlt: 'Website florestatv.com.br',
+      link: 'https://florestatv.vercel.app/'
+    },
+    {
       title: 'Website Evolveme',
       image: '/img/portfolio/evolve.png',
       imageAlt: 'Website evolveme.com.br',
