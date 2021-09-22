@@ -158,9 +158,9 @@ const PortfolioTemplate = () => {
       link: 'https://evolvestudio.github.io/processamentojogo/src/'
     },
     {
-      title: 'Websie Avifauna Bagé',
+      title: 'Portal Avifauna Bagé',
       image: '/img/portfolio/avifauna-bage.png',
-      imageAlt: 'Website Avifauna Bagé',
+      imageAlt: 'Portal Avifauna Bagé',
       link: 'https://avifaunabage.vercel.app/'
     },
     {
