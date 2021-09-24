@@ -78,7 +78,7 @@ const PastTemplate = () => {
               </p>
               <p>
                 <b>VOLUNTARIEER </b>
-                <b>Rotaract Bagé (AUG 2011 - Nov 2018)</b>
+                <b>Rotaract Bagé (AUG 2017 - Nov 2018)</b>
                 <b>
                   as <Badge size={`small`}>public image director</Badge>{' '}
                 </b>
