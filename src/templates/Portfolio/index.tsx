@@ -23,7 +23,7 @@ const PortfolioTemplate = () => {
       title: 'Portal Floresta.TV',
       image: '/img/portfolio/florestatv.png',
       imageAlt: 'Website florestatv.com.br',
-      link: 'https://florestatv.vercel.app/'
+      link: 'https://floresta.tv/'
     },
     {
       title: 'Website Evolveme',
