@@ -14,12 +14,11 @@ const ContactTemplate = () => {
     <S.ContactWrapper>
       <MainHeader
         ico={<Chat color={colors.primary} />}
-        title={`Lets chat?`}
+        title={`Let's chat?`}
         subtitle={``}
-        description={``}
+        description={`Let's take a chat about your project and the ways i can help you with? Call me!`}
         align={`center`}
       />
-
       <S.ContactSection>
         <S.ContactLinks>
           <S.ContactLink

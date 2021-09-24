@@ -18,7 +18,7 @@ const SkillsTemplate = () => {
         subtitle={`How i will help you.`}
         description={`I'm the person to take your project from the scratch and
         transform it into a real, beautiful, performative, fluid and animated application.
-        Fully of life and the essence of your business. 🤍 `}
+        Fully of life and the essence of your business. ✨ `}
       />
 
       <S.SkillsSection>
@@ -28,18 +28,21 @@ const SkillsTemplate = () => {
           <Box width={[1, 1 / 2]} p={[0, 3]}>
             <S.SkillsParagraph>
               <p>
-                <b>Main Technologies </b>
-                Javascript (ES6+), Typescript, Node.js, HTML5, CSS3.
+                <u>
+                  <b>Main stack </b>
+                </u>
+                Javascript (ES6+), Typescript, React.js, Next.js, Node.js,
+                GraphQL, AWS, and UI/UX design.
               </p>
               <p>
-                <b>Automation Tools</b> NPM, Webpack, Gulp.
+                <b>Automation tools</b> NPM, Webpack, Gulp.
               </p>
               <p>
                 <b>Frameworks &amp; Libs </b>
                 React, Redux, NextJ, Gatsby. Phaser.js, Pixi.js, Jquery.
               </p>
               <p>
-                <b>Styling Tools</b> SASS, Styled Components, CSS Modules,
+                <b>Styling tools</b> SASS, Styled Components, CSS Modules,
                 Bootstrap, Tailwind.
               </p>
             </S.SkillsParagraph>
@@ -52,7 +55,7 @@ const SkillsTemplate = () => {
               </p>
 
               <p>
-                <b>Back-End (General) </b>
+                <b>Back-end (general) </b>
                 Node, Express, PHP, Laravel, GraphQL, MongoDB, Mongoose, Mysql,
                 Sequelize, Api, Api Restful.
               </p>
@@ -63,7 +66,7 @@ const SkillsTemplate = () => {
               </p>
 
               <p>
-                <b>Main lnterpersonal skills </b>
+                <b>Soft skills </b>
                 Leadership, creativity, engagement, autonomy, patience, oratory,
                 empathy, determined and communication.
               </p>

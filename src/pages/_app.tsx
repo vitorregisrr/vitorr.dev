@@ -25,23 +25,44 @@ function App({ Component, pageProps, router }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Vitorr.dev • Creative Software Developer</title>
-        <link rel="shortcut icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content={theme.colors.background} />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta
-          name="apple-mobile-web-app-title"
-          content="Vitorr.dev • Creative Software Engineer"
-        />
+        <title>Vitorr.dev | Creative Software Engineer</title>
         <meta
           name="description"
-          content="Vitor is a software engineer with almost five years of experience developing front-end and back-end and now focused on front-end, web and creative stuff. I also have experience with management 
-          of international teams as a tech leader and trusts in giving he better to every place/project I am in! ✨"
+          content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
+        />
+        <link rel="shortcut icon" href="/img/icon-512.png" />
+        <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        {/* @ts-ignore */}
+        <meta
+          property="og:image"
+          content="https://www.vitorr.dev/img/logo-vitorrdev.jpg"
+        />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta
+          property="og:title"
+          content="Vitorr.dev | Creative Software Engineer"
+        />
+        <meta
+          property="og:description"
+          content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
+        />
+        <meta property="og:url" content="https://www.vitorr.dev" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:site_name" content="Vitorr.dev" />
+        <meta name="twitter:image:alt" content="Vitorr.dev" />
+        <meta name="twitter:site" content="@vitorregisr" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#149A41" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="Vitorr.dev" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Vitorr.dev" />
+        <meta
+          name="description"
+          content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
         />
       </Head>
 

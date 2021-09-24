@@ -27,6 +27,29 @@ export const CardWrapper = styled.article`
   cursor: pointer;
   box-shadow: 0.4px 0.4px 15px rgba(0, 0, 0, 0.15);
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url('/img/ico/external-link-outline.svg');
+    background-size: 30px 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     height: 190px;
   }
