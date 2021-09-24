@@ -77,7 +77,7 @@ const PastTemplate = () => {
                 (Photoshop, lllustrator, Adobe XD, etc).
               </p>
               <p>
-                <b>VOLUNTARIEER </b>
+                <b>VOLUNTEER </b>
                 <b>Rotaract Bagé (AUG 2017 - Nov 2018)</b>
                 <b>
                   as <Badge size={`small`}>public image director</Badge>{' '}
