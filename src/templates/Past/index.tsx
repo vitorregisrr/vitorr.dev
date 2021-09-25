@@ -55,7 +55,7 @@ const PastTemplate = () => {
                 <b>
                   as <Badge size={`small`}>game developer</Badge>
                 </b>
-                Creative idealization and developing of 2D educative games with
+                Creative idealization and development of 2D educative games with
                 Phaser.js and an online education platform with React.js and
                 Node.js.
               </p>
@@ -80,9 +80,9 @@ const PastTemplate = () => {
                 <b>VOLUNTEER </b>
                 <b>Rotaract Bagé (AUG 2017 - Nov 2018)</b>
                 <b>
-                  as <Badge size={`small`}>public image director</Badge>{' '}
+                  as <Badge size={`small`}>public image director</Badge>
                 </b>
-                Poverty Alleviation and community helping.{' '}
+                Poverty Alleviation and community helping.
               </p>
             </S.PastParagraph>
           </Box>
