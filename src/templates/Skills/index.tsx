@@ -39,7 +39,7 @@ const SkillsTemplate = () => {
               </p>
               <p>
                 <b>Frameworks &amp; Libs </b>
-                React, Redux, NextJ, Gatsby. Phaser.js, Pixi.js, Jquery.
+                React, Redux, Next.js, Gatsby, Phaser.js, Pixi.js, Jquery.
               </p>
               <p>
                 <b>Styling tools</b> SASS, Styled Components, CSS Modules,

@@ -20,6 +20,12 @@ const PortfolioTemplate = () => {
 
   const portfolioData: PortfolioItem[] = [
     {
+      title: 'Website Picode Education',
+      image: '/img/portfolio/picode.png',
+      imageAlt: 'Website picode.com.br',
+      link: 'https://picode-front.vercel.app/'
+    },
+    {
       title: 'Portal Floresta.TV',
       image: '/img/portfolio/florestatv.png',
       imageAlt: 'Website florestatv.com.br',
