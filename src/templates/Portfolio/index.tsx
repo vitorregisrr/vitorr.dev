@@ -71,7 +71,7 @@ const PortfolioTemplate = () => {
       title: 'Website Meu Portfólio',
       image: '/img/portfolio/meu-portfolio.png',
       imageAlt: 'Website Meu Portfólio',
-      link: 'https://meuportfolio.vercel.app/'
+      link: 'https://www.meuportfol.io/'
     },
     {
       title: 'Website OR2U',
