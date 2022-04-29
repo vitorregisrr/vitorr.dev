@@ -40,6 +40,15 @@ const PastTemplate = () => {
                 develop full-stack.
               </p>
               <p>
+                <b>Foton Tech (MAY 2021 - DEC 2021)</b>
+                <b>
+                  as <Badge size={`small`}> software engineer</Badge>
+                </b>
+                Worked in big companies and international teams with a focus on
+                front-end stuff with React, Typescript and UI/UX.
+              </p>
+
+              <p>
                 <b>Sorocabacom (JAN 2019 -JAN 2020)</b>
                 <b>
                   as <Badge size={`small`}>front-end developer </Badge>
@@ -51,7 +60,7 @@ const PastTemplate = () => {
               </p>
 
               <p>
-                <b>IFSUL Campus (May 2018 - DEC 2018)</b>
+                <b>IFSUL Campus (MAY 2018 - DEC 2018)</b>
                 <b>
                   as <Badge size={`small`}>game developer</Badge>
                 </b>
