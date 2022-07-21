@@ -7,18 +7,31 @@ import * as S from './styles'
 import { Badge } from 'components/UI'
 import { Sparkles } from 'components/UI/ico'
 
-const SkillsTemplate = () => {
+type SkillsTemplateProps = {
+  i18n: {
+    title: string
+    subtitle: string
+    rightText: {
+      html: string
+    }
+    leftText: {
+      html: string
+    }
+    description: string
+    badge_title: string
+  }
+}
+
+const SkillsTemplate = ({ i18n }: SkillsTemplateProps) => {
   const { colors } = useContext(ThemeContext)
 
   return (
     <S.SkillsWrapper>
       <MainHeader
         ico={<Sparkles color={colors.primary} />}
-        title={`My skills / knowledge`}
-        subtitle={`How i will help you.`}
-        description={`I'm the person to take your project from the scratch and
-        transform it into a real, beautiful, performative, fluid and animated application.
-        Fully of life and the essence of your business. ✨ `}
+        title={i18n.title}
+        subtitle={i18n.subtitle}
+        description={i18n.description}
       />
 
       <S.SkillsSection>
@@ -26,51 +39,14 @@ const SkillsTemplate = () => {
 
         <Flex flexWrap="wrap">
           <Box width={[1, 1 / 2]} p={[0, 3]}>
-            <S.SkillsParagraph>
-              <p>
-                <u>
-                  <b>Main stack </b>
-                </u>
-                Javascript (ES6+), Typescript, React.js, Next.js, Node.js,
-                GraphQL, AWS, and UI/UX design.
-              </p>
-              <p>
-                <b>Automation tools</b> NPM, Webpack, Gulp.
-              </p>
-              <p>
-                <b>Frameworks &amp; Libs </b>
-                React, Redux, Next.js, Gatsby, Phaser.js, Pixi.js, Jquery.
-              </p>
-              <p>
-                <b>Styling tools</b> SASS, Styled Components, CSS Modules,
-                Bootstrap, Tailwind.
-              </p>
-            </S.SkillsParagraph>
+            <S.SkillsParagraph
+              dangerouslySetInnerHTML={{ __html: i18n.leftText.html }}
+            />
           </Box>
           <Box width={[1, 1 / 2]} p={[0, 3]}>
-            <S.SkillsParagraph>
-              <p>
-                <b>Design tools and softwares </b>
-                Photoshop, lllustrator, Zeplin, AdobeXD, Figma.
-              </p>
-
-              <p>
-                <b>Back-end (general) </b>
-                Node, Express, PHP, Laravel, GraphQL, MongoDB, Mongoose, Mysql,
-                Sequelize, Api, Api Restful.
-              </p>
-
-              <p>
-                <b>Misc tools </b>
-                Phonegap, Cordova, Electron.
-              </p>
-
-              <p>
-                <b>Soft skills </b>
-                Leadership, creativity, engagement, autonomy, patience, oratory,
-                empathy, determined and communication.
-              </p>
-            </S.SkillsParagraph>
+            <S.SkillsParagraph
+              dangerouslySetInnerHTML={{ __html: i18n.rightText.html }}
+            />
           </Box>
         </Flex>
       </S.SkillsSection>

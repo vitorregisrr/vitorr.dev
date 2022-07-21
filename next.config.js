@@ -9,3 +9,17 @@ module.exports = withPWA({
     disable: !isProd
   }
 })
+
+module.exports = {
+  i18n: {
+    locales: ['en', 'pt'],
+    defaultLocale: 'pt',
+    pages: {
+      '*': ['common'],
+      "/": ["home"]
+    }
+  },
+  images: {
+    domains: ['media.graphcms.com', 'media.graphassets.com'],
+  },
+}

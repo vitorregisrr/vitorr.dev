@@ -56,13 +56,14 @@ const GlobalStyles = createGlobalStyle`
     /* Handle */
     ::-webkit-scrollbar-thumb {
       background-color: ${(props) => props.theme.colors.background};
-      border-radius: 15px;
+      border-radius: 0px;
       border: 2px solid rgba(0, 0, 0, 0);
       background-clip: padding-box;
       transition: background-color 0.5s ease-in-out;
     }
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
+      border-radius: 0px;
     }
 
     .iScrollIndicator{
@@ -72,6 +73,7 @@ const GlobalStyles = createGlobalStyle`
           : `rgba(250,250,250,.4)`} !important;
       opacity: .5;
       transition: all 0.4s;
+      border-radius: 0px !important;
     }
   }
 `

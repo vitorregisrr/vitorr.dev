@@ -114,9 +114,14 @@ export const HomeImage = styled.div`
     position: relative;
     z-index: 5;
     width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
 
     @media screen and (max-width: 768px) {
       width: 140px;
+      height: 140px;
     }
   }
 `
@@ -145,14 +150,14 @@ export const HomeCaptionTitle = styled.h1`
       text-shadow: 0.1px 0.1px 0px rgba(0, 0, 0, 0.1);
 
       @media screen and (max-width: 768px) {
-        font-size: 2.4rem;
+        font-size: 2.15rem;
         margin-bottom: 5px;
       }
     }
   }
 
   .c-p {
-    color: ${(props) => props.theme.colors.background_opos} !important;
+    color: ${(props) => props.theme.colors.primary} !important;
   }
 
   br {
@@ -169,7 +174,7 @@ export const HomeCaptionParagraph = styled.p`
   margin-top: 20px;
 
   @media screen and (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `
 
@@ -205,7 +210,7 @@ export const HomeLinksItem = styled.a`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     margin-bottom: 10px;
   }
 `

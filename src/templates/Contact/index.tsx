@@ -7,26 +7,45 @@ import * as S from './styles'
 import { Chat } from 'components/UI/ico'
 import { Github, Linkedin, Whatsapp } from '@styled-icons/bootstrap'
 
-const ContactTemplate = () => {
+type ContactTemplateProps = {
+  i18n: {
+    title: string
+    subtitle: string
+    linkedinInfo: {
+      label: string
+      link: string
+    }
+    whatsapp_info: {
+      label: string
+      link: string
+    }
+    githubInfo: {
+      link: string
+      label: string
+    }
+    emailInfo: {
+      label: string
+      link: string
+    }
+  }
+}
+const ContactTemplate = ({ i18n }: ContactTemplateProps) => {
   const { colors } = useContext(ThemeContext)
 
   return (
     <S.ContactWrapper>
       <MainHeader
         ico={<Chat color={colors.primary} />}
-        title={`Let's chat?`}
+        title={i18n.title}
         subtitle={``}
-        description={`Let's take a chat about your project and the ways i can help you with? Call me!`}
+        description={i18n.subtitle}
         align={`center`}
       />
       <S.ContactSection>
         <S.ContactLinks>
-          <S.ContactLink
-            target="_blank"
-            href="https://api.whatsapp.com/send?phone=5553997083545&text=Hey!%20I'm%20coming%20from%20vitorr.dev%20and..."
-          >
+          <S.ContactLink target="_blank" href={i18n.whatsapp_info.link}>
             <Whatsapp size={33} fill={colors.background_opos} />
-            +55 (53) 99708-3545
+            {i18n.whatsapp_info.label}
           </S.ContactLink>
 
           <S.ContactLink target="_blank" href="mailto:contact@vitorr.dev">
@@ -34,17 +53,14 @@ const ContactTemplate = () => {
             contact@vitorr.dev
           </S.ContactLink>
 
-          <S.ContactLink
-            target="_blank"
-            href="https://www.linkedin.com/in/vitorregisr/"
-          >
+          <S.ContactLink target="_blank" href={i18n.linkedinInfo.link}>
             <Linkedin size={27} fill={colors.background_opos} />
-            linkedin.com/in/vitorregisr/
+            {i18n.linkedinInfo.label}
           </S.ContactLink>
 
-          <S.ContactLink target="_blank" href="https://github.com/vitorregisrr">
+          <S.ContactLink target="_blank" href={i18n.linkedinInfo.link}>
             <Github size={25} fill={colors.background_opos} />
-            github.com/vitorregisrr
+            {i18n.githubInfo.label}
           </S.ContactLink>
         </S.ContactLinks>
       </S.ContactSection>

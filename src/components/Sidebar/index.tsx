@@ -7,34 +7,41 @@ import * as S from './styles'
 type SidebarProps = {
   currentIndex: number
   moveFullpage: (index: number) => void
+  i18n: {
+    home_label: string
+    skills_label: string
+    experiences_label: string
+    contact_label: string
+    portfolio_label: string
+  }
 }
 
-const Sidebar = ({ currentIndex, moveFullpage }: SidebarProps) => {
+const Sidebar = ({ currentIndex, moveFullpage, i18n }: SidebarProps) => {
   const { colors } = useContext(ThemeContext)
 
   const sidebarItems = [
     {
-      label: 'Home',
+      label: i18n.home_label,
       target: 'section-home',
       Ico: House
     },
     {
-      label: 'Skills / Knowledge',
+      label: i18n.skills_label,
       target: 'section-skills',
       Ico: Sparkles
     },
     {
-      label: 'Past Experiences',
+      label: i18n.experiences_label,
       target: 'section-experiences',
       Ico: Clock
     },
     {
-      label: 'Portfolio',
+      label: i18n.portfolio_label,
       target: 'section-portfolio',
       Ico: List
     },
     {
-      label: 'Contact',
+      label: i18n.contact_label,
       target: 'section-contact',
       Ico: Chat
     }

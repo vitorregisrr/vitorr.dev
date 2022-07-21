@@ -8,9 +8,24 @@ import * as animations from './animations'
 
 type HomeTemplateProps = {
   moveFullpage: (index: number) => void
+  i18n: {
+    title: string
+    description: string
+    menu_title: string
+    link_1_label: string
+    link_2_label: string
+    link_3_label: string
+    link_4_label: string
+    light_profile_image: {
+      url: string
+    }
+    dark_profile_image: {
+      url: string
+    }
+  }
 }
 
-const HomeTemplate = ({ moveFullpage }: HomeTemplateProps) => {
+const HomeTemplate = ({ moveFullpage, i18n }: HomeTemplateProps) => {
   const { title } = useContext(ThemeContext)
 
   return (
@@ -18,11 +33,11 @@ const HomeTemplate = ({ moveFullpage }: HomeTemplateProps) => {
       <S.HomeImage>
         <div className="profile-img">
           <Image
-            src="/img/shapes/profile.svg"
-            blurDataURL="/img/shapes/profile.svg"
+            src={i18n.light_profile_image.url}
+            blurDataURL={i18n.light_profile_image.url}
+            layout="fill"
+            objectFit="cover"
             placeholder="blur"
-            width={234}
-            height={237}
           />
         </div>
 
@@ -99,39 +114,27 @@ const HomeTemplate = ({ moveFullpage }: HomeTemplateProps) => {
         </AnimatePresence>
       </S.HomeImage>
       <S.HomeCaption>
-        <S.HomeCaptionTitle>
-          Hey there! My name is{' '}
-          <span className="highlight">Vitor Régis de Ramos</span> and I&apos;m a
-          <span className="highlight">
-            {' '}
-            Creative Software Engineer <span className="c-p">.</span> 🦅
-          </span>
-        </S.HomeCaptionTitle>
-        <S.HomeCaptionParagraph>
-          I&apos;m a software engineer with over five years of experience in
-          full-stack development and now focused on front-end, web and creative
-          stuff. I also have experience with management of international teams
-          as a tech leader and I trust in giving my best and always evolve in
-          every place and project I am in!
-          <br /> Lets build something awesome together? 🌟
-        </S.HomeCaptionParagraph>
+        <S.HomeCaptionTitle dangerouslySetInnerHTML={{ __html: i18n.title }} />
+        <S.HomeCaptionParagraph
+          dangerouslySetInnerHTML={{ __html: i18n.description }}
+        />
       </S.HomeCaption>
       <S.HomeLinks>
-        <S.HomeLinksTitle>
-          what more do you wanna know about me?
-        </S.HomeLinksTitle>
+        <S.HomeLinksTitle
+          dangerouslySetInnerHTML={{ __html: i18n.menu_title }}
+        />
         <S.HomeLinksList>
           <S.HomeLinksItem onClick={() => moveFullpage(1)}>
-            skills,{' '}
+            {i18n.link_1_label},{' '}
           </S.HomeLinksItem>
           <S.HomeLinksItem onClick={() => moveFullpage(2)}>
-            past experiences,{' '}
+            {i18n.link_2_label},{' '}
           </S.HomeLinksItem>
           <S.HomeLinksItem onClick={() => moveFullpage(3)}>
-            portfolio,{' '}
+            {i18n.link_3_label},{' '}
           </S.HomeLinksItem>
           <S.HomeLinksItem onClick={() => moveFullpage(4)}>
-            contact.
+            {i18n.link_4_label}.
           </S.HomeLinksItem>
         </S.HomeLinksList>
       </S.HomeLinks>

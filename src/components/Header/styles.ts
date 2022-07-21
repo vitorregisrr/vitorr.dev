@@ -76,7 +76,8 @@ export const MainHeaderParagraph = styled.p`
   line-height: 1.9;
 
   @media screen and (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    line-height: 1.8;
     padding-left: 0;
   }
 `
