@@ -35,7 +35,7 @@ const SkillsTemplate = ({ i18n }: SkillsTemplateProps) => {
       />
 
       <S.SkillsSection>
-        <Badge>Thechnical Knowledge</Badge>
+        <Badge>{i18n.badge_title}</Badge>
 
         <Flex flexWrap="wrap">
           <Box width={[1, 1 / 2]} p={[0, 3]}>
