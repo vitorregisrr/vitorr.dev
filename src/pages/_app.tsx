@@ -9,8 +9,13 @@ import usePersistedState from 'utils/usePersistedState'
 import LightTheme from 'styles/themes/light'
 import DarkTheme from 'styles/themes/dark'
 import GlobalStyles from 'styles/global'
+import Sidebar from 'components/Sidebar'
+import LanguagesButton from 'components/LanguagesButton'
+interface AppPropsEx extends AppProps {
+  i18n: any
+}
 
-function App({ Component, pageProps, router }: AppProps) {
+function App({ Component, pageProps, router }: AppPropsEx) {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', DarkTheme)
   const [isMounted, setMounted] = useState(false)
 
@@ -64,11 +69,14 @@ function App({ Component, pageProps, router }: AppProps) {
           name="description"
           content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
         />
+        <script>{`var pageAnimationDirection="left";`}</script>
       </Head>
 
       <GlobalStyles />
       <main key={isMounted + '0'}>
         <ThemeToggler toggleTheme={toggleTheme} />
+        <Sidebar />
+        <LanguagesButton />
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>

@@ -16,7 +16,7 @@ type PortfolioItem = {
   }
 }
 
-type PortfolioTemplateProps = {
+export type PortfolioTemplateProps = {
   i18n: {
     title: string
     description: string

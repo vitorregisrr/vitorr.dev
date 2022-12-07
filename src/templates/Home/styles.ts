@@ -8,6 +8,7 @@ export const HomeWrapper = styled.section`
   max-width: 850px;
   margin: 0 auto;
   padding-top: 30px;
+  min-height: 100vh;
 
   @media screen and (max-width: 768px) {
     padding: 90px 20px 0 20px;

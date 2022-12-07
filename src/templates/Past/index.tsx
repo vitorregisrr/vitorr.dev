@@ -8,7 +8,7 @@ import { Clock } from 'components/UI/ico'
 
 import * as S from './styles'
 
-type PastTemplateProps = {
+export type PastTemplateProps = {
   i18n: {
     title: string
     description: string

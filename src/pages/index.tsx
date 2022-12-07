@@ -1,22 +1,21 @@
 import { GetStaticProps } from 'next'
 import client from 'graphql/client'
-import { GET_CONTENT } from 'graphql/queries'
+import { GET_HOME_CONTENT } from 'graphql/queries'
 
-import MainTemplate, { MainTemplateProps } from 'templates/Main'
+import HomeTemplate, { HomeTemplateProps } from 'templates/Home'
 
-function HomePage({ i18n }: MainTemplateProps) {
-  return <MainTemplate i18n={i18n} />
+function HomePage({ i18n }: HomeTemplateProps) {
+  return <HomeTemplate i18n={i18n} />
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const { home, pastExperience, portfolio, sidebar, contact, skills } =
-    await client.request(GET_CONTENT, {
-      locale
-    })
+  const { home } = await client.request(GET_HOME_CONTENT, {
+    locale
+  })
 
   return {
     props: {
-      i18n: { home, pastExperience, portfolio, sidebar, contact, skills }
+      i18n: { ...home }
     }
   }
 }

@@ -1,7 +1,6 @@
 // @ts-nocheck
 import { useState, useRef } from 'react'
 import Sidebar from 'components/Sidebar'
-import ReactFullpage from '@fullpage/react-fullpage'
 
 import HomeTemplate from '../Home'
 import SkillsTemplate from '../Skills'
@@ -11,10 +10,6 @@ import ContactTemplate from '../Contact'
 
 import * as S from './styles'
 import LanguagesButton from 'components/LanguagesButton'
-
-const pluginWrapper = () => {
-  require('../../statics/scrolloverflow.js')
-}
 
 export type MainTemplateProps = {
   i18n: {
@@ -114,46 +109,23 @@ const MainTemplate = ({ i18n }: MainTemplateProps) => {
   return (
     <>
       <LanguagesButton />
-      <Sidebar
-        currentIndex={currentIndex}
-        moveFullpage={(index) => moveFullpage(index)}
-        i18n={i18n.sidebar}
-      />
-      <ReactFullpage
-        scrollingSpeed={1000}
-        onLeave={(origin, destination) => {
-          setCurrentIndex(destination.index)
-        }}
-        scrollBar={false}
-        scrollOverflow={true}
-        pluginWrapper={pluginWrapper}
-        render={({ fullpageApi }) => {
-          // @ts-ignore
-          fullpageRef.current = fullpageApi
-          return (
-            <ReactFullpage.Wrapper>
-              <S.SectionWrapper className="section">
-                <HomeTemplate
-                  i18n={i18n.home}
-                  moveFullpage={(index) => moveFullpage(index)}
-                />
-              </S.SectionWrapper>
-              <S.SectionWrapper className="section">
-                <SkillsTemplate i18n={i18n.skills} />
-              </S.SectionWrapper>
-              <S.SectionWrapper className="section">
-                <PastTemplate i18n={i18n.pastExperience} />
-              </S.SectionWrapper>
-              <S.SectionWrapper className="section">
-                <PortfolioTemplate i18n={i18n.portfolio} />
-              </S.SectionWrapper>
-              <S.SectionWrapper className="section">
-                <ContactTemplate i18n={i18n.contact} />
-              </S.SectionWrapper>
-            </ReactFullpage.Wrapper>
-          )
-        }}
-      />
+      <Sidebar i18n={i18n.sidebar} />
+
+      <S.SectionWrapper className="section">
+        <HomeTemplate i18n={i18n.home} />
+      </S.SectionWrapper>
+      <S.SectionWrapper className="section">
+        <SkillsTemplate i18n={i18n.skills} />
+      </S.SectionWrapper>
+      <S.SectionWrapper className="section">
+        <PastTemplate i18n={i18n.pastExperience} />
+      </S.SectionWrapper>
+      <S.SectionWrapper className="section">
+        <PortfolioTemplate i18n={i18n.portfolio} />
+      </S.SectionWrapper>
+      <S.SectionWrapper className="section">
+        <ContactTemplate i18n={i18n.contact} />
+      </S.SectionWrapper>
     </>
   )
 }

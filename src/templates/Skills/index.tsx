@@ -7,7 +7,7 @@ import * as S from './styles'
 import { Badge } from 'components/UI'
 import { Sparkles } from 'components/UI/ico'
 
-type SkillsTemplateProps = {
+export type SkillsTemplateProps = {
   i18n: {
     title: string
     subtitle: string

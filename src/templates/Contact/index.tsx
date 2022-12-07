@@ -7,7 +7,7 @@ import * as S from './styles'
 import { Chat } from 'components/UI/ico'
 import { Github, Linkedin, Whatsapp } from '@styled-icons/bootstrap'
 
-type ContactTemplateProps = {
+export type ContactTemplateProps = {
   i18n: {
     title: string
     subtitle: string

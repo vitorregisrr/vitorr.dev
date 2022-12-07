@@ -2,13 +2,15 @@ import styled from 'styled-components'
 
 export const ContactWrapper = styled.section`
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding-top: 62px;
   margin-bottom: 30px;
   width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
 
   @media screen and (max-width: 768px) {
     padding: 40px 25px 0 25px;

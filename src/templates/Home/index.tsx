@@ -6,8 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import * as S from './styles'
 import * as animations from './animations'
 
-type HomeTemplateProps = {
-  moveFullpage: (index: number) => void
+export type HomeTemplateProps = {
   i18n: {
     title: string
     description: string
@@ -25,7 +24,7 @@ type HomeTemplateProps = {
   }
 }
 
-const HomeTemplate = ({ moveFullpage, i18n }: HomeTemplateProps) => {
+const HomeTemplate = ({ i18n }: HomeTemplateProps) => {
   const { title } = useContext(ThemeContext)
 
   return (
@@ -124,18 +123,10 @@ const HomeTemplate = ({ moveFullpage, i18n }: HomeTemplateProps) => {
           dangerouslySetInnerHTML={{ __html: i18n.menu_title }}
         />
         <S.HomeLinksList>
-          <S.HomeLinksItem onClick={() => moveFullpage(1)}>
-            {i18n.link_1_label},{' '}
-          </S.HomeLinksItem>
-          <S.HomeLinksItem onClick={() => moveFullpage(2)}>
-            {i18n.link_2_label},{' '}
-          </S.HomeLinksItem>
-          <S.HomeLinksItem onClick={() => moveFullpage(3)}>
-            {i18n.link_3_label},{' '}
-          </S.HomeLinksItem>
-          <S.HomeLinksItem onClick={() => moveFullpage(4)}>
-            {i18n.link_4_label}.
-          </S.HomeLinksItem>
+          <S.HomeLinksItem>{i18n.link_1_label}, </S.HomeLinksItem>
+          <S.HomeLinksItem>{i18n.link_2_label}, </S.HomeLinksItem>
+          <S.HomeLinksItem>{i18n.link_3_label}, </S.HomeLinksItem>
+          <S.HomeLinksItem>{i18n.link_4_label}.</S.HomeLinksItem>
         </S.HomeLinksList>
       </S.HomeLinks>
     </S.HomeWrapper>
