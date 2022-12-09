@@ -87,7 +87,11 @@ function App({ Component, pageProps, router }: AppPropsEx) {
             initial={false}
             onExitComplete={() => window.scrollTo(0, 0)}
           >
-            <Component {...pageProps} key={router.route} />
+            <Component
+              {...pageProps}
+              setAnimationDirection={setAnimationDirection}
+              key={router.route}
+            />
           </AnimatePresence>
         </main>
       </AnimationDirection.Provider>

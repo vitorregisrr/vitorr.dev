@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { ThemeContext } from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -8,8 +8,10 @@ import * as animations from './animations'
 
 import AnimationDirection from 'contexts/animations'
 import * as layoutAnimations from 'animations/fade'
+import Link from 'next/link'
 
 export type HomeTemplateProps = {
+  setAnimationDirection: any
   i18n: {
     title: string
     description: string
@@ -27,9 +29,34 @@ export type HomeTemplateProps = {
   }
 }
 
-const HomeTemplate = ({ i18n }: HomeTemplateProps) => {
+const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
   const { title } = useContext(ThemeContext)
   const animationDirection = useContext(AnimationDirection)
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const menuItems = [
+    {
+      target: '/skills',
+      label: i18n.link_1_label
+    },
+    {
+      target: '/past-experiences',
+      label: i18n.link_2_label
+    },
+    {
+      target: '/portfolio',
+      label: i18n.link_3_label
+    },
+    {
+      target: '/contact',
+      label: i18n.link_4_label
+    }
+  ]
+
+  const setAnimationDirectionHandler = (newIndex: number) => {
+    setAnimationDirection(currentIndex > newIndex ? 'top' : 'bottom')
+    setCurrentIndex(newIndex)
+  }
 
   return (
     <motion.div
@@ -134,10 +161,16 @@ const HomeTemplate = ({ i18n }: HomeTemplateProps) => {
             dangerouslySetInnerHTML={{ __html: i18n.menu_title }}
           />
           <S.HomeLinksList>
-            <S.HomeLinksItem>{i18n.link_1_label}, </S.HomeLinksItem>
-            <S.HomeLinksItem>{i18n.link_2_label}, </S.HomeLinksItem>
-            <S.HomeLinksItem>{i18n.link_3_label}, </S.HomeLinksItem>
-            <S.HomeLinksItem>{i18n.link_4_label}.</S.HomeLinksItem>
+            {menuItems.map((item, index) => (
+              <Link href={item.target} passHref key={index}>
+                <S.HomeLinksItem
+                  onClick={() => setAnimationDirectionHandler(index)}
+                >
+                  {item.label}
+                  {index === menuItems.length - 1 ? `. ` : ', '}
+                </S.HomeLinksItem>
+              </Link>
+            ))}
           </S.HomeLinksList>
         </S.HomeLinks>
       </S.HomeWrapper>
