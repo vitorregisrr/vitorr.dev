@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { ThemeContext } from 'styled-components'
 import { House, Sparkles, Clock, List, Chat } from 'components/UI/ico'
 
@@ -14,7 +14,12 @@ type i18nProps = {
   portfolio_label: string
 }
 
-const Sidebar = () => {
+type SidebarProps = {
+  setAnimationDirection: any
+}
+
+const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
   const router = useRouter()
   const { colors } = useContext(ThemeContext)
   const i18n: i18nProps = {
@@ -53,12 +58,18 @@ const Sidebar = () => {
     }
   ]
 
+  const setAnimationDirectionHandler = (newIndex: number) => {
+    setAnimationDirection(currentIndex > newIndex ? 'top' : 'bottom')
+    setCurrentIndex(newIndex)
+  }
+
   return (
     <S.SidebarWrapper>
       <S.SidebarContent>
         {sidebarItems.map((item, index) => (
           <Link href={item.target} key={index} passHref>
             <S.SidebarItem
+              onClick={() => setAnimationDirectionHandler(index)}
               isActive={
                 item.target === '/'
                   ? router.pathname === '/'
