@@ -1,10 +1,14 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useContext, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { ThemeContext } from 'styled-components'
+
 import { House, Sparkles, Clock, List, Chat } from 'components/UI/ico'
 
+import GlobalAnimationCtx from 'contexts/globalAnimation'
+
 import * as S from './styles'
+import { LeftTopArrowCircleDimensions } from '@styled-icons/boxicons-regular/LeftTopArrowCircle'
 
 type i18nProps = {
   home_label: string
@@ -19,8 +23,8 @@ type SidebarProps = {
 }
 
 const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
   const router = useRouter()
+  const globalAnimation = useContext(GlobalAnimationCtx)
   const { colors } = useContext(ThemeContext)
   const i18n: i18nProps = {
     home_label: `home`,
@@ -59,9 +63,27 @@ const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
   ]
 
   const setAnimationDirectionHandler = (newIndex: number) => {
-    setAnimationDirection(currentIndex > newIndex ? 'top' : 'bottom')
-    setCurrentIndex(newIndex)
+    const oldPage = globalAnimation.currentPage
+    setAnimationDirection({
+      direction: oldPage > newIndex ? 'top' : 'bottom',
+      currentPage: newIndex
+    })
   }
+
+  // Start GlobalAnimationCTX current page according to start page
+  useEffect(() => {
+    let currentPage = 0
+    if (router.pathname !== '/') {
+      currentPage = sidebarItems.findIndex((item, index) => {
+        if (index !== 0) {
+          return router.pathname.includes(item.target)
+        }
+      })
+      console.log('isnt home page')
+    }
+    setAnimationDirection({ ...globalAnimation, currentPage })
+    console.log(currentPage)
+  }, [])
 
   return (
     <S.SidebarWrapper>

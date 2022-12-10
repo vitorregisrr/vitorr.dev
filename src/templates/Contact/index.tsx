@@ -8,7 +8,7 @@ import * as layoutAnimations from 'animations/fade'
 import * as S from './styles'
 import { Chat } from 'components/UI/ico'
 import { Github, Linkedin, Whatsapp } from '@styled-icons/bootstrap'
-import AnimationDirection from 'contexts/animations'
+import globalAnimationCtx from 'contexts/globalAnimation'
 
 export type ContactTemplateProps = {
   i18n: {
@@ -34,11 +34,11 @@ export type ContactTemplateProps = {
 }
 const ContactTemplate = ({ i18n }: ContactTemplateProps) => {
   const { colors } = useContext(ThemeContext)
-  const animationDirection = useContext(AnimationDirection)
+  const globalAnimation = useContext(globalAnimationCtx)
 
   return (
     <motion.div
-      {...(animationDirection === 'top'
+      {...(globalAnimation.direction === 'top'
         ? layoutAnimations.fadeTop
         : layoutAnimations.fadeBottom)}
     >

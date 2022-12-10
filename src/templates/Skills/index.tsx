@@ -9,7 +9,7 @@ import { Sparkles } from 'components/UI/ico'
 
 import * as S from './styles'
 
-import AnimationDirection from 'contexts/animations'
+import globalAnimationCtx from 'contexts/globalAnimation'
 import * as layoutAnimations from 'animations/fade'
 
 export type SkillsTemplateProps = {
@@ -29,11 +29,11 @@ export type SkillsTemplateProps = {
 
 const SkillsTemplate = ({ i18n }: SkillsTemplateProps) => {
   const { colors } = useContext(ThemeContext)
-  const animationDirection = useContext(AnimationDirection)
+  const globalAnimation = useContext(globalAnimationCtx)
 
   return (
     <motion.div
-      {...(animationDirection === 'top'
+      {...(globalAnimation.direction === 'top'
         ? layoutAnimations.fadeTop
         : layoutAnimations.fadeBottom)}
     >

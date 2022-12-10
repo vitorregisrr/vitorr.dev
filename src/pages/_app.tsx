@@ -5,7 +5,7 @@ import ThemeToggler from 'components/ThemeToggler'
 import { AnimatePresence } from 'framer-motion'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import usePersistedState from 'utils/usePersistedState'
-import AnimationDirection from 'contexts/animations'
+import AnimationDirection from 'contexts/globalAnimation'
 
 import LightTheme from 'styles/themes/light'
 import DarkTheme from 'styles/themes/dark'
@@ -19,7 +19,10 @@ interface AppPropsEx extends AppProps {
 function App({ Component, pageProps, router }: AppPropsEx) {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', DarkTheme)
   const [isMounted, setMounted] = useState(false)
-  const [animationDirection, setAnimationDirection] = useState('top')
+  const [animationDirection, setAnimationDirection] = useState({
+    direction: 'top',
+    currentPage: 0
+  })
 
   useEffect(() => {
     setMounted(true)

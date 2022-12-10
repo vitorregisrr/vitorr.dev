@@ -4,8 +4,10 @@ import { GET_HOME_CONTENT } from 'graphql/queries'
 
 import HomeTemplate, { HomeTemplateProps } from 'templates/Home'
 
-function HomePage({ i18n }: HomeTemplateProps) {
-  return <HomeTemplate i18n={i18n} />
+function HomePage({ i18n, setAnimationDirection }: HomeTemplateProps) {
+  return (
+    <HomeTemplate setAnimationDirection={setAnimationDirection} i18n={i18n} />
+  )
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {

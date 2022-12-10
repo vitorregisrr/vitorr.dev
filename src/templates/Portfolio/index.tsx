@@ -9,7 +9,7 @@ import Card from 'components/UI/Card'
 
 import * as S from './styles'
 
-import AnimationDirection from 'contexts/animations'
+import globalAnimationCtx from 'contexts/globalAnimation'
 import * as layoutAnimations from 'animations/fade'
 
 type PortfolioItem = {
@@ -30,11 +30,11 @@ export type PortfolioTemplateProps = {
 
 const PortfolioTemplate = ({ i18n }: PortfolioTemplateProps) => {
   const { colors } = useContext(ThemeContext)
-  const animationDirection = useContext(AnimationDirection)
+  const globalAnimation = useContext(globalAnimationCtx)
 
   return (
     <motion.div
-      {...(animationDirection === 'top'
+      {...(globalAnimation.direction === 'top'
         ? layoutAnimations.fadeTop
         : layoutAnimations.fadeBottom)}
     >

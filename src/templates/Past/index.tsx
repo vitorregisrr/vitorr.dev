@@ -7,7 +7,7 @@ import MainHeader from 'components/Header'
 import { Badge } from 'components/UI'
 import { Clock } from 'components/UI/ico'
 
-import AnimationDirection from 'contexts/animations'
+import globalAnimationCtx from 'contexts/globalAnimation'
 import * as layoutAnimations from 'animations/fade'
 
 import * as S from './styles'
@@ -26,11 +26,11 @@ export type PastTemplateProps = {
 
 const PastTemplate = ({ i18n }: PastTemplateProps) => {
   const { colors } = useContext(ThemeContext)
-  const animationDirection = useContext(AnimationDirection)
+  const globalAnimation = useContext(globalAnimationCtx)
 
   return (
     <motion.div
-      {...(animationDirection === 'top'
+      {...(globalAnimation.direction === 'top'
         ? layoutAnimations.fadeTop
         : layoutAnimations.fadeBottom)}
     >

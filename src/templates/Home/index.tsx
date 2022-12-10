@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import * as S from './styles'
 import * as animations from './animations'
 
-import AnimationDirection from 'contexts/animations'
+import globalAnimationCtx from 'contexts/globalAnimation'
 import * as layoutAnimations from 'animations/fade'
 import Link from 'next/link'
 
@@ -31,8 +31,7 @@ export type HomeTemplateProps = {
 
 const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
   const { title } = useContext(ThemeContext)
-  const animationDirection = useContext(AnimationDirection)
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const globalAnimation = useContext(globalAnimationCtx)
 
   const menuItems = [
     {
@@ -54,13 +53,16 @@ const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
   ]
 
   const setAnimationDirectionHandler = (newIndex: number) => {
-    setAnimationDirection(currentIndex > newIndex ? 'top' : 'bottom')
-    setCurrentIndex(newIndex)
+    const oldPage = globalAnimation.currentPage
+    setAnimationDirection({
+      direction: oldPage > newIndex ? 'top' : 'bottom',
+      currentPage: newIndex
+    })
   }
 
   return (
     <motion.div
-      {...(animationDirection === 'top'
+      {...(globalAnimation.direction === 'top'
         ? layoutAnimations.fadeTop
         : layoutAnimations.fadeBottom)}
     >
