@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const DownloadCVWrapper = styled.a`
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 25px;
   width: 55px;
   height: 55px;
   padding: 0;
