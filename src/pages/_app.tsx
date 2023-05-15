@@ -57,29 +57,29 @@ function App({ Component, pageProps, router }: AppPropsEx) {
           <meta property="og:image:type" content="image/jpg" />
           <meta
             property="og:title"
-            content="Vitorr.dev | Creative Software Engineer"
+            content="Vitorregis.dev | Creative Software Engineer"
           />
           <meta
             property="og:description"
             content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
           />
-          <meta property="og:url" content="https://www.vitorr.dev" />
+          <meta property="og:url" content="https://www.vitorregis.dev" />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta property="og:site_name" content="Vitorr.dev" />
-          <meta name="twitter:image:alt" content="Vitorr.dev" />
+          <meta property="og:site_name" content="VitorRegis.dev" />
+          <meta name="twitter:image:alt" content="VitorRegis.dev" />
           <meta name="twitter:site" content="@vitorregisr" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#149A41" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="application-name" content="Vitorr.dev" />
+          <meta name="application-name" content="VitorRegis.dev" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content="Vitorr.dev" />
+          <meta name="apple-mobile-web-app-title" content="VitorRegis.dev" />
           <meta
             name="description"
             content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
