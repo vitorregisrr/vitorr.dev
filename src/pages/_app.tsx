@@ -16,6 +16,7 @@ import Sidebar from 'components/Sidebar'
 import LanguagesButton from 'components/LanguagesButton'
 
 import 'nprogress/nprogress.css'
+import DownloadCV from 'components/DownloadCV'
 
 interface AppPropsEx extends AppProps {
   i18n: any
@@ -88,6 +89,7 @@ function App({ Component, pageProps, router }: AppPropsEx) {
         <GlobalStyles />
         <main key={isMounted + '0'}>
           <ThemeToggler toggleTheme={toggleTheme} />
+          <DownloadCV />
           <Sidebar setAnimationDirection={setAnimationDirection} />
           <LanguagesButton />
           <AnimatePresence
