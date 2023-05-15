@@ -23,13 +23,17 @@ export const MainHeaderContent = styled.div<MainHeaderContentProps>`
   `}
 `
 
-export const MainHeaderTop = styled.div`
+export const MainHeaderTop = styled.div<MainHeaderContentProps>`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 
   @media screen and (max-width: 768px) {
-    max-width: 80%;
+    ${(props) =>
+      props.align !== `center` &&
+      `
+      max-width: 80%;
+  `}
   }
 
   .ico {
