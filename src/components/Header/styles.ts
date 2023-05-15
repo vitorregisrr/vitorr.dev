@@ -21,6 +21,7 @@ export const MainHeaderContent = styled.div<MainHeaderContentProps>`
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
   `}
 `
 
