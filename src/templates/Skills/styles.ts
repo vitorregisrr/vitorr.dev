@@ -39,13 +39,21 @@ export const SkillsParagraph = styled.div`
 
   p {
     font-size: 1.6rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     line-height: 1.6;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
-  b {
+  h3 {
     font-size: 1.9rem;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.7rem;
+    }
   }
 `

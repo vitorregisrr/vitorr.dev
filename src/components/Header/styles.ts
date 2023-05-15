@@ -51,7 +51,7 @@ export const MainHeaderTop = styled.div`
   }
 `
 
-export const MainHeaderTitle = styled.h2`
+export const MainHeaderTitle = styled.h1`
   font-size: 3.8rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -61,7 +61,7 @@ export const MainHeaderTitle = styled.h2`
   }
 `
 
-export const MainHeaderSubTitle = styled.h3`
+export const MainHeaderSubTitle = styled.h2`
   font-size: 2.4rem;
   font-weight: 400;
 
