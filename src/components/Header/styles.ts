@@ -13,7 +13,6 @@ export const MainHeaderContent = styled.div<MainHeaderContentProps>`
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  max-width: 80%;
 
   ${(props) =>
     props.align === `center` &&
@@ -21,7 +20,6 @@ export const MainHeaderContent = styled.div<MainHeaderContentProps>`
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
   `}
 `
 
@@ -31,6 +29,7 @@ export const MainHeaderTop = styled.div`
   margin-bottom: 20px;
 
   @media screen and (max-width: 768px) {
+    max-width: 80%;
   }
 
   .ico {
