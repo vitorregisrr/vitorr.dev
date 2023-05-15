@@ -198,6 +198,11 @@ export const HomeLinksList = styled.ul`
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const HomeLinksItem = styled.a`

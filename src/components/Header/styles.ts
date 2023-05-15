@@ -13,6 +13,7 @@ export const MainHeaderContent = styled.div<MainHeaderContentProps>`
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
+  max-width: 80%;
 
   ${(props) =>
     props.align === `center` &&
@@ -35,7 +36,7 @@ export const MainHeaderTop = styled.div`
     margin-right: 20px;
 
     @media screen and (max-width: 768px) {
-      margin-right: 10px;
+      margin-right: 20px;
     }
 
     svg,
@@ -44,7 +45,7 @@ export const MainHeaderTop = styled.div`
       transition: all 0.5s ease-in-out;
 
       @media screen and (max-width: 768px) {
-        width: 40px;
+        width: 25px;
       }
     }
   }
@@ -56,7 +57,7 @@ export const MainHeaderTitle = styled.h2`
   text-transform: uppercase;
 
   @media screen and (max-width: 768px) {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
 `
 
@@ -65,7 +66,7 @@ export const MainHeaderSubTitle = styled.h3`
   font-weight: 400;
 
   @media screen and (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `
 
@@ -76,7 +77,7 @@ export const MainHeaderParagraph = styled.p`
   line-height: 1.9;
 
   @media screen and (max-width: 768px) {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     line-height: 1.8;
     padding-left: 0;
   }

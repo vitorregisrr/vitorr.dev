@@ -63,6 +63,10 @@ export const PastParagraph = styled.div`
     margin-bottom: 40px;
     line-height: 1.6;
 
+    @media screen and (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -87,5 +91,9 @@ export const PastParagraph = styled.div`
     font-size: 1.9rem;
     display: block;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.7rem;
+    }
   }
 `

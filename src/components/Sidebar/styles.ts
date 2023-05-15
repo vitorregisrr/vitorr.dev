@@ -108,7 +108,7 @@ export const SidebarItem = styled.li<SidebarItemProps>`
     transition: all 0.5s ease-in-out;
 
     @media screen and (max-width: 768px) {
-      width: 30px;
+      width: 23px;
     }
   }
 

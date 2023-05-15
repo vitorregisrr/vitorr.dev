@@ -25,7 +25,7 @@ const S = {
     transition: all 0.45s ease-in;
 
     @media screen and (max-width: 768px) {
-      font-size: ${(props) => (props.size === `small` ? '1.2rem' : '1.8rem')};
+      font-size: ${(props) => (props.size === `small` ? '1.2rem' : '1.6rem')};
     }
   `
 }

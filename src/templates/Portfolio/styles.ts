@@ -13,7 +13,7 @@ export const PortfolioWrapper = styled.section`
   overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
-    padding: 40px 25px 45px 25px;
+    padding: 40px 25px 85px 25px;
   }
 `
 
