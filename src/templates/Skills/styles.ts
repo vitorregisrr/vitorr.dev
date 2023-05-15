@@ -8,13 +8,12 @@ export const SkillsWrapper = styled.section`
   padding-top: 62px;
   padding-left: 130px;
   padding-right: 230px;
-  margin-bottom: 30px;
+  padding-bottom: 50px;
   width: 100%;
   overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
-    padding: 40px 25px 0 25px;
-    margin-bottom: 45px;
+    padding: 40px 25px 40px 25px;
   }
 `
 

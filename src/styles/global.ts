@@ -75,6 +75,24 @@ const GlobalStyles = createGlobalStyle`
       transition: all 0.4s;
       border-radius: 0px !important;
     }
+  
+    #nprogress{
+      position: absolute;
+      z-index: 5000;
+    }
+
+    #nprogress .bar {
+      background-color: ${(props) =>
+        props.theme.colors.background_opos} !important;
+      height: 4.5px;
+      z-index: 2000;
+    }
+
+    #nprogress .peg {
+      box-shadow: 0 0 20px ${(props) =>
+        props.theme.colors.background_opos}, 0 0 5px ${(props) =>
+  props.theme.colors.background_opos};
+    }
   }
 `
 

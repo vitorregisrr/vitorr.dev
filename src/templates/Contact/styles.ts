@@ -7,14 +7,13 @@ export const ContactWrapper = styled.section`
   justify-content: center;
   margin: 0 auto;
   padding-top: 62px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
 
   @media screen and (max-width: 768px) {
-    padding: 40px 25px 0 25px;
-    margin-bottom: 45px;
+    padding: 40px 25px 45px 25px;
   }
 `
 

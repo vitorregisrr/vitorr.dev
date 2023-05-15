@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import ThemeToggler from 'components/ThemeToggler'
+import Router from 'next/router'
 import { AnimatePresence } from 'framer-motion'
+import NProgress from 'nprogress'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import usePersistedState from 'utils/usePersistedState'
 import AnimationDirection from 'contexts/globalAnimation'
@@ -10,8 +11,12 @@ import AnimationDirection from 'contexts/globalAnimation'
 import LightTheme from 'styles/themes/light'
 import DarkTheme from 'styles/themes/dark'
 import GlobalStyles from 'styles/global'
+import ThemeToggler from 'components/ThemeToggler'
 import Sidebar from 'components/Sidebar'
 import LanguagesButton from 'components/LanguagesButton'
+
+import 'nprogress/nprogress.css'
+
 interface AppPropsEx extends AppProps {
   i18n: any
 }
@@ -101,5 +106,16 @@ function App({ Component, pageProps, router }: AppPropsEx) {
     </ThemeProvider>
   )
 }
+
+NProgress.configure({
+  minimum: 0.3,
+  easing: 'ease',
+  speed: 800,
+  showSpinner: false
+})
+
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 export default App

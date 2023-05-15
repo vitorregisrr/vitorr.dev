@@ -8,7 +8,7 @@ import { House, Sparkles, Clock, List, Chat } from 'components/UI/ico'
 import GlobalAnimationCtx from 'contexts/globalAnimation'
 
 import * as S from './styles'
-import { LeftTopArrowCircleDimensions } from '@styled-icons/boxicons-regular/LeftTopArrowCircle'
+import GlobalAnimation from 'contexts/globalAnimation'
 
 type i18nProps = {
   home_label: string
@@ -64,6 +64,7 @@ const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
 
   const setAnimationDirectionHandler = (newIndex: number) => {
     const oldPage = globalAnimation.currentPage
+
     setAnimationDirection({
       direction: oldPage > newIndex ? 'top' : 'bottom',
       currentPage: newIndex
@@ -82,8 +83,40 @@ const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
       console.log('isnt home page')
     }
     setAnimationDirection({ ...globalAnimation, currentPage })
-    console.log(currentPage)
   }, [])
+
+  const handleWheel = (event: WheelEvent) => {
+    if (!document.getElementById('nprogress')) {
+      const totalPageHeight = document.body.scrollHeight
+      const scrollPoint = window.scrollY + window.innerHeight
+      // change page on hit bottom
+      if (event.deltaY > 0) {
+        if (scrollPoint >= totalPageHeight) {
+          const oldPage = globalAnimation.currentPage
+          const nextPage = oldPage === sidebarItems.length - 1 ? 0 : oldPage + 1
+          setAnimationDirectionHandler(nextPage)
+          router.push(sidebarItems[nextPage].target)
+        }
+      }
+
+      if (event.deltaY < 0) {
+        if (window.scrollY === 0) {
+          const oldPage = globalAnimation.currentPage
+          const nextPage = oldPage === 0 ? sidebarItems.length - 1 : oldPage - 1
+          setAnimationDirectionHandler(nextPage)
+          router.push(sidebarItems[nextPage].target)
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheel)
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+    }
+  }, [globalAnimation.currentPage])
 
   return (
     <S.SidebarWrapper>
