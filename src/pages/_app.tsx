@@ -52,7 +52,7 @@ function App({ Component, pageProps, router }: AppPropsEx) {
           {/* @ts-ignore */}
           <meta
             property="og:image"
-            content="https://www.vitorr.dev/img/logo-vitorrdev.jpg"
+            content="https://www.vitoregis.dev/img/logo-vitorrdev.jpg"
           />
           <meta property="og:image:type" content="image/jpg" />
           <meta
