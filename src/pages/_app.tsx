@@ -42,7 +42,7 @@ function App({ Component, pageProps, router }: AppPropsEx) {
     <ThemeProvider theme={theme}>
       <AnimationDirection.Provider value={animationDirection}>
         <Head>
-          <title>Vitorr.dev | Creative Software Engineer</title>
+          <title>Vitor Régis | Freelancer Creative Software Engineer</title>
           <meta
             name="description"
             content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
