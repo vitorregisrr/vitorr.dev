@@ -57,9 +57,9 @@ const ContactTemplate = ({ i18n }: ContactTemplateProps) => {
               {i18n.whatsapp_info.label}
             </S.ContactLink>
 
-            <S.ContactLink target="_blank" href="mailto:contact@vitorr.dev">
+            <S.ContactLink target="_blank" href={i18n.emailInfo.link}>
               <EmailOutline size={33} fill={colors.background_opos} />
-              contact@vitorr.dev
+              {i18n.emailInfo.label}
             </S.ContactLink>
 
             <S.ContactLink target="_blank" href={i18n.linkedinInfo.link}>
