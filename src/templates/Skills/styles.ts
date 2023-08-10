@@ -8,7 +8,6 @@ export const SkillsWrapper = styled.section`
   padding-top: 62px;
   padding-left: 130px;
   padding-right: 230px;
-  padding-bottom: 50px;
   width: 100%;
   overflow-x: hidden;
 
@@ -21,9 +20,11 @@ export const SkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 0;
+  padding: 40px 0 80px 0;
 
   @media screen and (max-width: 768px) {
+    padding-bottom: 40px;
+
     label {
       margin-bottom: 25px;
     }
