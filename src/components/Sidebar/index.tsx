@@ -2,13 +2,15 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useContext, useEffect } from 'react'
 import { ThemeContext } from 'styled-components'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import { House, Sparkles, Clock, List, Chat } from 'components/UI/ico'
+import MouseAnimation from 'components/UI/MouseAnimation'
 
 import GlobalAnimationCtx from 'contexts/globalAnimation'
 
 import * as S from './styles'
-import GlobalAnimation from 'contexts/globalAnimation'
+import * as animations from './animations'
 
 type i18nProps = {
   home_label: string
@@ -139,6 +141,15 @@ const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
           </Link>
         ))}
       </S.SidebarContent>
+      <AnimatePresence>
+        {router.pathname === '/' && (
+          <motion.div {...animations.mouseScroll}>
+            <S.MouseScrollWrapper>
+              <MouseAnimation />
+            </S.MouseScrollWrapper>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </S.SidebarWrapper>
   )
 }

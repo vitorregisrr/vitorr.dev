@@ -133,3 +133,10 @@ export const SidebarItem = styled.li<SidebarItemProps>`
     }
   }
 `
+
+export const MouseScrollWrapper = styled.div`
+  position: absolute;
+  right: -20px;
+  bottom: 25px;
+  transform: translateX(100%);
+`
