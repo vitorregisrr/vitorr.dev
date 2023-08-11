@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { useContext, useEffect } from 'react'
 import { ThemeContext } from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 import { House, Sparkles, Clock, List, Chat } from 'components/UI/ico'
 import MouseAnimation from 'components/UI/MouseAnimation'

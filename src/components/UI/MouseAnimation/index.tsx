@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 const MouseAnimationWrapper = styled.div`
   display: flex;
@@ -54,13 +55,21 @@ const MouseAnimationWrapper = styled.div`
   }
 `
 
-const MouseAnimation = () => (
-  <MouseAnimationWrapper>
-    <div className="mousey">
-      <div className="scroller"></div>
-    </div>
-    <div className="label">Scroll to navigate</div>
-  </MouseAnimationWrapper>
-)
+const MouseAnimation = () => {
+  const router = useRouter()
+
+  return (
+    <MouseAnimationWrapper>
+      <div className="mousey">
+        <div className="scroller"></div>
+      </div>
+      <div className="label">
+        {router.locale?.includes('en')
+          ? 'Scroll to navigate'
+          : 'Deslize para navegar'}
+      </div>
+    </MouseAnimationWrapper>
+  )
+}
 
 export default MouseAnimation
