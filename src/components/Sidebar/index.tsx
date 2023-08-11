@@ -101,8 +101,6 @@ const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
         }
       }
 
-      console.log(event.deltaY, scrollPoint, totalPageHeight)
-
       if (event.deltaY < 0) {
         if (window.scrollY === 0) {
           const oldPage = globalAnimation.currentPage
