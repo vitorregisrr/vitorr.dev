@@ -9,7 +9,6 @@ export const SkillsWrapper = styled.section`
   padding-left: 130px;
   padding-right: 230px;
   width: 100%;
-  overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
     padding: 40px 25px 40px 25px;
@@ -20,7 +19,7 @@ export const SkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 0 80px 0;
+  padding: 40px 0;
 
   @media screen and (max-width: 768px) {
     padding-bottom: 40px;

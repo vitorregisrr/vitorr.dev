@@ -93,13 +93,15 @@ const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
       const scrollPoint = window.scrollY + window.innerHeight
       // change page on hit bottom
       if (event.deltaY > 0) {
-        if (scrollPoint >= totalPageHeight) {
+        if (scrollPoint + 2 >= totalPageHeight) {
           const oldPage = globalAnimation.currentPage
           const nextPage = oldPage === sidebarItems.length - 1 ? 0 : oldPage + 1
           setAnimationDirectionHandler(nextPage)
           router.push(sidebarItems[nextPage].target)
         }
       }
+
+      console.log(event.deltaY, scrollPoint, totalPageHeight)
 
       if (event.deltaY < 0) {
         if (window.scrollY === 0) {
