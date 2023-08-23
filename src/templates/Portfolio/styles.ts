@@ -67,6 +67,7 @@ export const PortfolioSectionTitle = styled.h3`
   @media screen and (max-width: 768px) {
     font-size: 1.9rem;
     margin-bottom: 2rem;
+    margin-top: 3.5rem;
 
     svg {
       width: 30px;
