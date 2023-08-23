@@ -59,13 +59,14 @@ export const PortfolioSection = styled.section`
 export const PortfolioSectionTitle = styled.h3`
   display: flex;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.8rem;
   opacity: 0.8;
 
   @media screen and (max-width: 768px) {
     font-size: 1.9rem;
+    margin-bottom: 2rem;
 
     svg {
       width: 30px;
