@@ -216,6 +216,7 @@ export const HomeLinksItem = styled.a`
 
   @media screen and (max-width: 768px) {
     font-size: 1.7rem;
-    margin-bottom: 16px;
+    margin-bottom: 9px;
+    display: block;
   }
 `
