@@ -91,12 +91,6 @@ export const SidebarItem = styled.li<SidebarItemProps>`
 
     & > ${SidebarItemLabel} {
       opacity: 1;
-    }
-  }
-
-  &:hover {
-    & > ${SidebarItemLabel} {
-      opacity: 1;
       background-color: ${(props) => props.theme.colors.background_opos};
     }
   }

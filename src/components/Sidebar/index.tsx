@@ -124,21 +124,21 @@ const Sidebar = ({ setAnimationDirection }: SidebarProps) => {
     <S.SidebarWrapper>
       <S.SidebarContent>
         {sidebarItems.map((item, index) => (
-          <Link href={item.target} key={index} passHref>
-            <S.SidebarItem
-              onClick={() => setAnimationDirectionHandler(index)}
-              isActive={
-                item.target === '/'
-                  ? router.pathname === '/'
-                  : router.pathname.includes(item.target)
-              }
-              key={index}
-              aria-label={item.label}
-            >
+          <S.SidebarItem
+            onClick={() => setAnimationDirectionHandler(index)}
+            isActive={
+              item.target === '/'
+                ? router.pathname === '/'
+                : router.pathname.includes(item.target)
+            }
+            key={index}
+            aria-label={item.label}
+          >
+            <Link href={item.target} key={index} passHref>
               <item.Ico color={colors.background_opos} />
-              <S.SidebarItemLabel>{item.label}</S.SidebarItemLabel>
-            </S.SidebarItem>
-          </Link>
+            </Link>
+            <S.SidebarItemLabel>{item.label}</S.SidebarItemLabel>
+          </S.SidebarItem>
         ))}
       </S.SidebarContent>
       <AnimatePresence>

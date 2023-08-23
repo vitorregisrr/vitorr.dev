@@ -73,6 +73,7 @@ const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
               src={i18n.light_profile_image.url}
               blurDataURL={i18n.light_profile_image.url}
               layout="fill"
+              alt="Imagem de perfil Vitor Régis de Ramos"
               objectFit="cover"
               placeholder="blur"
             />

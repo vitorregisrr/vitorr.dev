@@ -36,7 +36,7 @@ export const HomeImage = styled.div`
     transform: translate(-50%, -50%);
 
     &.eagle {
-      & > div {
+      img {
         position: absolute;
         left: 50%;
         top: -190px;
@@ -51,7 +51,7 @@ export const HomeImage = styled.div`
     }
 
     &.coruja {
-      & > div {
+      img {
         position: absolute;
         left: 50%;
         top: -170px;
@@ -78,7 +78,7 @@ export const HomeImage = styled.div`
     transform: translate(-50%, -50%);
 
     &.sun {
-      & > div {
+      img {
         position: absolute;
         left: 50%;
         top: -100px;
@@ -94,7 +94,7 @@ export const HomeImage = styled.div`
     }
 
     &.moon {
-      & > div {
+      img {
         position: absolute;
         left: 50%;
         top: -50px;
