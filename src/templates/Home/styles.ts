@@ -45,7 +45,7 @@ export const HomeImage = styled.div`
 
         @media screen and (max-width: 768px) {
           top: -145px;
-          width: 100px;
+          width: 90px;
         }
       }
     }
@@ -60,7 +60,6 @@ export const HomeImage = styled.div`
 
         @media screen and (max-width: 768px) {
           top: -132px;
-          left: 10px;
           width: 134px;
         }
       }
