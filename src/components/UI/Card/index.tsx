@@ -7,9 +7,18 @@ type CardProps = {
   imageAlt: string
   link: string
   title: string
+  technologies: string[]
+  categories: string[]
 }
 
-const Card = ({ image, imageAlt, link, title }: CardProps) => {
+const Card = ({
+  image,
+  imageAlt,
+  link,
+  title,
+  technologies,
+  categories
+}: CardProps) => {
   return (
     <S.CardWrapper>
       <a href={link} target="_blank" rel="noreferrer">
@@ -17,12 +26,21 @@ const Card = ({ image, imageAlt, link, title }: CardProps) => {
           <Image
             src={image}
             alt={imageAlt}
+            width={500}
+            height={500}
             blurDataURL={image}
             placeholder="blur"
-            layout="fill"
           />
         </S.CardBackground>
+
         <S.CardCaption>
+          <div className="tags">
+            {technologies.map((item) => (
+              <span key={item} className="tag-item">
+                {item}
+              </span>
+            ))}
+          </div>
           <h3 className="title">{title}</h3>
         </S.CardCaption>
       </a>

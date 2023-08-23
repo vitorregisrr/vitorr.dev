@@ -82,4 +82,17 @@ export const CardCaption = styled.div`
   .title {
     font-weight: 400;
   }
+
+  .tags {
+    display: flex;
+    gap: 5px;
+
+    .tag-item {
+      font-size: 13px;
+      background-color: ${(props) => props.theme.colors.background};
+      color: ${(props) => props.theme.colors.background_opos};
+      border-radius: 20px;
+      padding: 2px 10px;
+    }
+  }
 `

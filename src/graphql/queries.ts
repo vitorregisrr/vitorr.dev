@@ -63,6 +63,8 @@ export const GET_PORTFOLIO_CONTENT = gql`
       items {
         link
         title
+        technologies
+        categories
         image {
           url
         }

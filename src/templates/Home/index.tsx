@@ -90,6 +90,7 @@ const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
                     src="/img/shapes/eagle.svg"
                     blurDataURL="/img/shapes/eagle.svg"
                     placeholder="blur"
+                    alt="Fígura de uma Águia"
                     width={165}
                     height={92}
                   />
@@ -106,6 +107,7 @@ const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
                     src="/img/shapes/coruja.svg"
                     blurDataURL="/img/shapes/coruja.svg"
                     placeholder="blur"
+                    alt="Fígura de uma coruja"
                     width={181}
                     height={50}
                   />
@@ -126,6 +128,7 @@ const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
                     src="/img/shapes/sun.svg"
                     blurDataURL="/img/shapes/sun.svg"
                     placeholder="blur"
+                    alt="Fígura de um sol"
                     width={381}
                     height={355}
                   />
@@ -142,6 +145,7 @@ const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
                     src="/img/shapes/moon.svg"
                     blurDataURL="/img/shapes/moon.svg"
                     placeholder="blur"
+                    alt="Fígura de uma lua"
                     width={325}
                     height={260}
                   />

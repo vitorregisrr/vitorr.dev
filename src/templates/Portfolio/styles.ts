@@ -18,3 +18,16 @@ export const PortfolioWrapper = styled.section`
 `
 
 export const PortfolioSection = styled.section``
+
+export const PortfolioSectionTitle = styled.h3`
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+
+  svg {
+    margin-right: 6px;
+  }
+`
