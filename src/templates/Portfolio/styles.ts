@@ -17,15 +17,60 @@ export const PortfolioWrapper = styled.section`
   }
 `
 
-export const PortfolioSection = styled.section``
+export const PortfolioSection = styled.section`
+  .slick-slide {
+    padding: 0 10px;
+  }
+
+  .slick-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    margin-top: 10px;
+    z-index: 4;
+
+    button {
+      width: 15px;
+      height: 15px;
+      padding: 0;
+      border-radius: 50%;
+      margin: 0 13px;
+      background-color: ${(props) => props.theme.colors.primary};
+      color: rgba(250, 250, 250, 0);
+      opacity: 0.6;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .slick-active {
+      button {
+        opacity: 1;
+        background-color: ${(props) => props.theme.colors.primary};
+      }
+    }
+  }
+`
 
 export const PortfolioSectionTitle = styled.h3`
   display: flex;
   align-items: center;
   font-size: 2.5rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
   opacity: 0.8;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.9rem;
+
+    svg {
+      width: 30px;
+    }
+  }
 
   svg {
     margin-right: 6px;

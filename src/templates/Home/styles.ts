@@ -61,11 +61,7 @@ export const HomeImage = styled.div`
         @media screen and (max-width: 768px) {
           top: -132px;
           left: 10px;
-
-          div,
-          img {
-            width: 134px;
-          }
+          width: 134px;
         }
       }
     }
@@ -220,6 +216,6 @@ export const HomeLinksItem = styled.a`
 
   @media screen and (max-width: 768px) {
     font-size: 1.7rem;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 `

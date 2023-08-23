@@ -14,9 +14,9 @@ import GlobalStyles from 'styles/global'
 import ThemeToggler from 'components/ThemeToggler'
 import Sidebar from 'components/Sidebar'
 import LanguagesButton from 'components/LanguagesButton'
+import DownloadCV from 'components/DownloadCV'
 
 import 'nprogress/nprogress.css'
-import DownloadCV from 'components/DownloadCV'
 
 interface AppPropsEx extends AppProps {
   i18n: any

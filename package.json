@@ -35,6 +35,7 @@
     "@styled-icons/remix-line": "^10.18.0",
     "@styled-icons/typicons": "^10.18.0",
     "@types/nprogress": "^0.2.0",
+    "@types/react-slick": "^0.23.10",
     "@types/rebass": "^4.0.9",
     "framer-motion": "^4.1.17",
     "graphql": "^16.5.0",
@@ -47,6 +48,7 @@
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",
     "rebass": "^4.0.7",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
