@@ -7,8 +7,9 @@ export const HomeWrapper = styled.section`
   flex-direction: column;
   max-width: 850px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding: 120px 0 146px 0;
   min-height: 100vh;
+  overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
     padding: 120px 20px 95px 20px;
