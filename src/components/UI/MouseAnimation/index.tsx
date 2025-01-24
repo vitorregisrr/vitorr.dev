@@ -5,7 +5,7 @@ const MouseAnimationWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 25px;
-  opacity: .5;
+  opacity: 0.5;
 
   @media screen and (max-width: 992px) {
     display: none;

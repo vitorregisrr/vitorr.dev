@@ -130,7 +130,6 @@ export const HomeCaptionTitle = styled.h1`
   font-size: 3.6rem;
   color: ${(props) => props.theme.colors.background_opos};
   font-weight: 400;
-  
 
   @media screen and (max-width: 768px) {
     font-size: 1.9rem;
@@ -155,7 +154,6 @@ export const HomeCaptionTitle = styled.h1`
       display: block;
       text-shadow: 0.1px 0.1px 0px rgba(0, 0, 0, 0.1);
     }
-
   }
 
   .c-p {

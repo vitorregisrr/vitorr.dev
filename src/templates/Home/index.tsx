@@ -169,7 +169,12 @@ const HomeTemplate = ({ i18n, setAnimationDirection }: HomeTemplateProps) => {
           />
           <S.HomeLinksList>
             {menuItems.map((item, index) => (
-              <Link href={item.target} passHref key={index} style={{textDecoration: 'none'}}>
+              <Link
+                href={item.target}
+                passHref
+                key={index}
+                style={{ textDecoration: 'none' }}
+              >
                 <S.HomeLinksItem
                   onClick={() => setAnimationDirectionHandler(index)}
                 >
