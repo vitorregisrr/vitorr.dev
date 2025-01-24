@@ -96,6 +96,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .bubble-menu{
+    position: relative;
     z-index: 2000;
   }
 `

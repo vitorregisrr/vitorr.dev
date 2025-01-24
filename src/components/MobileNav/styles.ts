@@ -49,8 +49,8 @@ export const MobileNavItem = styled.li<MobileNavItemProps>`
 
     svg,
     path {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       opacity: ${(props) => (props.isActive ? 1 : 0.5)};
       transition: all 0.3s ease-in-out;
     }
@@ -67,7 +67,7 @@ export const MobileNavItem = styled.li<MobileNavItemProps>`
 `
 
 export const MobileNavItemLabel = styled.span`
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
   text-align: center;

@@ -81,9 +81,7 @@ const MobileNav = ({ setAnimationDirection, toggleTheme }: MobileNavProps) => {
                         justifyContent: 'center'
                       }}
                     >
-                      <S.MobileNavItemLabel
-                        style={{ marginTop: 14, fontSize: 18 }}
-                      >
+                      <S.MobileNavItemLabel style={{ marginTop: 14 }}>
                         Alternar modo
                       </S.MobileNavItemLabel>
 
@@ -101,9 +99,7 @@ const MobileNav = ({ setAnimationDirection, toggleTheme }: MobileNavProps) => {
                         justifyContent: 'center'
                       }}
                     >
-                      <S.MobileNavItemLabel
-                        style={{ marginTop: 22, fontSize: 18 }}
-                      >
+                      <S.MobileNavItemLabel style={{ marginTop: 22 }}>
                         Idioma
                       </S.MobileNavItemLabel>
                       <LanguagesButton hasContainer />
