@@ -48,7 +48,7 @@ function App({ Component, pageProps, router }: AppPropsEx) {
           <title>Vitor Régis | Freelancer Creative Software Engineer</title>
           <meta
             name="description"
-            content="Vitor is a software engineer with over five years of experience in full-stack development and now focused on front-end, web and creative stuff."
+            content="With over seven years of experience in full-stack development, I specialize in creating user-focused web experiences. Passionate about front-end development, creative problem-solving, and leading teams to success, I deliver projects that exceed expectations. Let’s build something remarkable together! 🚀"
           />
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
