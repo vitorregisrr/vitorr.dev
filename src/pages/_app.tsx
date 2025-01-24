@@ -15,7 +15,7 @@ import ThemeToggler from 'components/ThemeToggler'
 import Sidebar from 'components/Sidebar'
 import LanguagesButton from 'components/LanguagesButton'
 import DownloadCV from 'components/DownloadCV'
-import {useMedia} from 'use-media'
+import { useMedia } from 'use-media'
 
 import 'nprogress/nprogress.css'
 import MobileNav from 'components/MobileNav'
@@ -31,7 +31,7 @@ function App({ Component, pageProps, router }: AppPropsEx) {
     direction: 'top',
     currentPage: 0
   })
-  const isDesktop = useMedia({ minWidth: 1024 });
+  const isDesktop = useMedia({ minWidth: 1024 })
 
   useEffect(() => {
     setMounted(true)
@@ -55,7 +55,7 @@ function App({ Component, pageProps, router }: AppPropsEx) {
           {/* @ts-ignore */}
           <meta
             property="og:image"
-            content="https://www.vitoregis.dev/img/logo-vitorrdev.jpg"
+            content="https://www.vitorregis.dev/img/og-image.jpg"
           />
           <meta property="og:image:type" content="image/jpg" />
           <meta
@@ -91,19 +91,19 @@ function App({ Component, pageProps, router }: AppPropsEx) {
 
         <GlobalStyles />
         <main key={isMounted + '0'}>
-         {isDesktop && <>
-        <ThemeToggler toggleTheme={toggleTheme} />
-          <Sidebar 
-          setAnimationDirection={setAnimationDirection} 
-          />
-          <LanguagesButton />
-         </>}
+          {isDesktop && (
+            <>
+              <ThemeToggler toggleTheme={toggleTheme} />
+              <Sidebar setAnimationDirection={setAnimationDirection} />
+              <LanguagesButton />
+            </>
+          )}
 
-          {!isDesktop && <>
-          <MobileNav
-          setAnimationDirection={setAnimationDirection} 
-           />
-          </>}
+          {!isDesktop && (
+            <>
+              <MobileNav setAnimationDirection={setAnimationDirection} />
+            </>
+          )}
 
           <DownloadCV />
 
