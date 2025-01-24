@@ -109,7 +109,7 @@ export const Button = styled.button`
   span {
     position: absolute;
     bottom: 2px;
-    right: -5px;
+    right: -2px;
     display: flex;
     align-items: center;
     justify-content: center;

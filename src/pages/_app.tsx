@@ -15,20 +15,23 @@ import ThemeToggler from 'components/ThemeToggler'
 import Sidebar from 'components/Sidebar'
 import LanguagesButton from 'components/LanguagesButton'
 import DownloadCV from 'components/DownloadCV'
+import {useMedia} from 'use-media'
 
 import 'nprogress/nprogress.css'
+import MobileNav from 'components/MobileNav'
 
 interface AppPropsEx extends AppProps {
   i18n: any
 }
 
 function App({ Component, pageProps, router }: AppPropsEx) {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', DarkTheme)
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', LightTheme)
   const [isMounted, setMounted] = useState(false)
   const [animationDirection, setAnimationDirection] = useState({
     direction: 'top',
     currentPage: 0
   })
+  const isDesktop = useMedia({ minWidth: 1024 });
 
   useEffect(() => {
     setMounted(true)
@@ -88,10 +91,22 @@ function App({ Component, pageProps, router }: AppPropsEx) {
 
         <GlobalStyles />
         <main key={isMounted + '0'}>
-          <ThemeToggler toggleTheme={toggleTheme} />
-          <DownloadCV />
-          <Sidebar setAnimationDirection={setAnimationDirection} />
+         {isDesktop && <>
+        <ThemeToggler toggleTheme={toggleTheme} />
+          <Sidebar 
+          setAnimationDirection={setAnimationDirection} 
+          />
           <LanguagesButton />
+         </>}
+
+          {!isDesktop && <>
+          <MobileNav
+          setAnimationDirection={setAnimationDirection} 
+           />
+          </>}
+
+          <DownloadCV />
+
           <AnimatePresence
             exitBeforeEnter
             initial={false}

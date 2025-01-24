@@ -7,6 +7,7 @@ export const SidebarWrapper = styled.nav`
   height: 100vh;
   width: 74px;
   background-color: ${(props) => props.theme.colors.terc};
+  border-radius: 0 82px 82px 0;
   transition: background-color 0.5s ease-in-out;
   z-index: 1000;
 

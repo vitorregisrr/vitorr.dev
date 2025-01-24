@@ -39,7 +39,7 @@ const SkillsTemplate = ({ i18n }: SkillsTemplateProps) => {
     >
       <S.SkillsWrapper>
         <MainHeader
-          ico={<Sparkles color={colors.primary} />}
+          ico={<Sparkles color={colors.background_opos} />}
           title={i18n.title}
           subtitle={i18n.subtitle}
           description={i18n.description}

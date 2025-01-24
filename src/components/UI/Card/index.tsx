@@ -41,7 +41,7 @@ const Card = ({
               </span>
             ))}
           </div>
-          <h3 className="title">{title}</h3>
+          {/* <h3 className="title">{title}</h3> */}
         </S.CardCaption>
       </a>
     </S.CardWrapper>

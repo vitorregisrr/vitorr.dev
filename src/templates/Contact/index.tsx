@@ -44,7 +44,7 @@ const ContactTemplate = ({ i18n }: ContactTemplateProps) => {
     >
       <S.ContactWrapper>
         <MainHeader
-          ico={<Chat color={colors.primary} />}
+          ico={<Chat color={colors.background_opos} />}
           title={i18n.title}
           subtitle={``}
           description={i18n.subtitle}

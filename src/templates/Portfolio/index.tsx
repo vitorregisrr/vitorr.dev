@@ -44,7 +44,7 @@ const PortfolioTemplate = ({ i18n }: PortfolioTemplateProps) => {
     >
       <S.PortfolioWrapper>
         <MainHeader
-          ico={<List color={colors.primary} />}
+          ico={<List color={colors.background_opos} />}
           title={i18n.title}
           subtitle={i18n.description}
           description={``}

@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const ThemeTogglerWrapper = styled.button`
+export const NavTogglerWrapper = styled.button`
   position: fixed;
   right: 0;
   top: 0;
@@ -14,7 +14,7 @@ export const ThemeTogglerWrapper = styled.button`
   background-color: ${(props) => props.theme.colors.background_opos};
   border-radius: 0 0 0 32px;
   transition: background-color 0.5s ease-in-out;
-  z-index: 1000;
+  z-index: 2100;
 
   @media screen and (max-width: 768px) {
     width: 62px;
@@ -22,20 +22,26 @@ export const ThemeTogglerWrapper = styled.button`
   }
 `
 
-export const ThemeTogglerIcon = styled.div`
+export const NavTogglerIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  color: #fff;
 
   .ico {
     position: absolute;
+    ${(props) =>
+      props.theme.title === 'light' &&
+      css`
+        filter: invert(100%) brightness(200%);
+      `}
 
-    &.moon {
+    &.close {
       margin: 0 -7px -4px 0;
     }
 
-    &.sun {
+    &.open {
       margin: 0 -4px -5px 0;
     }
 

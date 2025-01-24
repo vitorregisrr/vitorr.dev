@@ -36,7 +36,7 @@ const PastTemplate = ({ i18n }: PastTemplateProps) => {
     >
       <S.PastWrapper>
         <MainHeader
-          ico={<Clock color={colors.primary} />}
+          ico={<Clock color={colors.background_opos} />}
           title={i18n.title}
           subtitle={i18n.description}
           description={``}

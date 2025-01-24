@@ -44,7 +44,7 @@ export const HomeImage = styled.div`
         width: 125px;
 
         @media screen and (max-width: 768px) {
-          top: -145px;
+          top: -155px;
           width: 90px;
         }
       }
@@ -130,6 +130,7 @@ export const HomeCaptionTitle = styled.h1`
   font-size: 3.6rem;
   color: ${(props) => props.theme.colors.background_opos};
   font-weight: 400;
+  
 
   @media screen and (max-width: 768px) {
     font-size: 1.9rem;
@@ -139,20 +140,22 @@ export const HomeCaptionTitle = styled.h1`
     }
   }
 
+  @media screen and (max-width: 768px) {
+    line-height: 1.6;
+  }
+
   .highlight {
     font-weight: 700;
     color: ${(props) => props.theme.colors.primary};
     text-shadow: 0.2px 0.2px 0px rgba(0, 0, 0, 0.3);
 
     @media screen and (max-width: 768px) {
+      font-size: 2.15rem;
+      margin-bottom: 0px;
       display: block;
       text-shadow: 0.1px 0.1px 0px rgba(0, 0, 0, 0.1);
-
-      @media screen and (max-width: 768px) {
-        font-size: 2.15rem;
-        margin-bottom: 5px;
-      }
     }
+
   }
 
   .c-p {
@@ -174,6 +177,7 @@ export const HomeCaptionParagraph = styled.p`
 
   @media screen and (max-width: 768px) {
     font-size: 1.6rem;
+    line-height: 1.5;
   }
 `
 
@@ -189,6 +193,8 @@ export const HomeLinksTitle = styled.h2`
 
   @media screen and (max-width: 768px) {
     font-size: 1.6rem;
+    margin-top: 28px;
+    margin-bottom: 18px;
   }
 `
 
@@ -204,7 +210,7 @@ export const HomeLinksList = styled.ul`
   }
 `
 
-export const HomeLinksItem = styled.a`
+export const HomeLinksItem = styled.span`
   margin-left: 10px;
   font-weight: 700;
   color: ${(props) => props.theme.colors.primary};
@@ -215,7 +221,7 @@ export const HomeLinksItem = styled.a`
 
   @media screen and (max-width: 768px) {
     font-size: 1.7rem;
-    margin-bottom: 9px;
+    margin-bottom: 16px;
     display: block;
   }
 `

@@ -19,7 +19,7 @@ export const DownloadCVWrapper = styled.a`
   @media screen and (max-width: 768px) {
     width: 55px;
     height: 55px;
-    bottom: 90px;
+    bottom: 18px;
     right: 15px;
 
     svg {
