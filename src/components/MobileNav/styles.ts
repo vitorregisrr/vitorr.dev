@@ -8,7 +8,7 @@ export const MobileNavWrapper = styled.nav`
   top: 0;
   left: 0;
   transform: none;
-  background-color: ${(props) => props.theme.colors.terc};
+  background-color: ${(props) => props.theme.colors.background};
   border-radius: 0;
   display: flex;
   align-items: center;

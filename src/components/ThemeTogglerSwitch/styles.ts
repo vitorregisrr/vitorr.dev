@@ -8,7 +8,7 @@ export const ThemeTogglerWrapper = styled.button`
   padding: 5px;
   width: 100px;
   height: 42px;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.terc};
   border: none;
   border-radius: 32px;
   cursor: pointer;
