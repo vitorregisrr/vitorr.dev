@@ -76,7 +76,7 @@ export const PortfolioSectionTitle = styled.h3`
     margin-top: 3.5rem;
 
     svg {
-      width: 30px;
+      width: 28px;
     }
   }
 
