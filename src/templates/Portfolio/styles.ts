@@ -18,6 +18,12 @@ export const PortfolioWrapper = styled.section`
 `
 
 export const PortfolioSection = styled.section`
+  margin-top: 3rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1.8srem;
+  }
+
   .slick-slide {
     padding: 0 10px;
   }

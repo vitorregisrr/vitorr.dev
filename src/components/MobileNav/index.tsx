@@ -8,7 +8,7 @@ import { House, Sparkles, Clock, List, Chat } from 'components/UI/ico'
 
 import * as S from './styles'
 import NavToggler from './NavToggler'
-import ThemeTogglerSwitch from 'components/ThemeTogglerSwitch'
+import ThemeTogglerSwitch from 'components/ThemeToggler copy'
 import LanguagesButton from 'components/LanguagesButton'
 
 type MobileNavProps = {

@@ -51,7 +51,7 @@ const PortfolioTemplate = ({ i18n }: PortfolioTemplateProps) => {
         />
 
         <S.PortfolioSection>
-          <S.PortfolioSectionTitle>
+          <S.PortfolioSectionTitle style={{ marginTop: 0 }}>
             <Paintbrush size={34}></Paintbrush>
             Design and Development
           </S.PortfolioSectionTitle>
