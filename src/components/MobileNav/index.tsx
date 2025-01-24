@@ -8,12 +8,15 @@ import { House, Sparkles, Clock, List, Chat } from 'components/UI/ico'
 
 import * as S from './styles'
 import NavToggler from './NavToggler'
+import ThemeTogglerSwitch from 'components/ThemeTogglerSwitch'
+import LanguagesButton from 'components/LanguagesButton'
 
 type MobileNavProps = {
   setAnimationDirection: any
+  toggleTheme: () => void
 }
 
-const MobileNav = ({ setAnimationDirection }: MobileNavProps) => {
+const MobileNav = ({ setAnimationDirection, toggleTheme }: MobileNavProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleOpen = () => setIsOpen((prev) => !prev)
 
@@ -38,35 +41,45 @@ const MobileNav = ({ setAnimationDirection }: MobileNavProps) => {
       <NavToggler toggleOpen={toggleOpen} isOpen={isOpen} />
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0, opacity: 0 }}
-            transition={{ duration: 0.5, type: 'spring', bounce: 0.4 }}
-            className="bubble-menu"
-          >
-            <S.MobileNavWrapper>
-              <S.MobileNavContent>
-                {navItems.map((item, index) => (
-                  <S.MobileNavItem
-                    onClick={() => onLinkClickHandler(index)}
-                    isActive={
-                      item.target === '/'
-                        ? router.pathname === '/'
-                        : router.pathname.includes(item.target)
-                    }
-                    key={index}
-                    aria-label={item.label}
-                  >
-                    <Link href={item.target} passHref>
-                      <item.Ico color={colors.background_opos} />
-                      <S.MobileNavItemLabel>{item.label}</S.MobileNavItemLabel>
-                    </Link>
-                  </S.MobileNavItem>
-                ))}
-              </S.MobileNavContent>
-            </S.MobileNavWrapper>
-          </motion.div>
+          <>
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.5, type: 'spring', bounce: 0.4 }}
+              className="bubble-menu"
+            >
+              <S.MobileNavWrapper>
+                <S.MobileNavContent>
+                  <LanguagesButton />
+                  {navItems.map((item, index) => (
+                    <S.MobileNavItem
+                      onClick={() => onLinkClickHandler(index)}
+                      isActive={
+                        item.target === '/'
+                          ? router.pathname === '/'
+                          : router.pathname.includes(item.target)
+                      }
+                      key={index}
+                      aria-label={item.label}
+                    >
+                      <Link href={item.target} passHref>
+                        <item.Ico color={colors.background_opos} />
+                        <S.MobileNavItemLabel>
+                          {item.label}
+                        </S.MobileNavItemLabel>
+                      </Link>
+                    </S.MobileNavItem>
+                  ))}
+                  <S.MobileNavItemLabel style={{ marginTop: 14, fontSize: 18 }}>
+                    Alternar modo
+                  </S.MobileNavItemLabel>
+
+                  <ThemeTogglerSwitch toggleTheme={toggleTheme} />
+                </S.MobileNavContent>
+              </S.MobileNavWrapper>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

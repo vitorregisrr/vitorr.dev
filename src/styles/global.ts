@@ -94,6 +94,10 @@ const GlobalStyles = createGlobalStyle`
   props.theme.colors.background_opos};
     }
   }
+
+  .bubble-menu{
+    z-index: 2000;
+  }
 `
 
 export default GlobalStyles

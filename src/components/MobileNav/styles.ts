@@ -26,6 +26,7 @@ export const MobileNavContent = styled.ul`
   justify-content: center;
   margin: 0;
   padding: 0;
+  padding-bottom: 100px;
   gap: 12px;
 `
 

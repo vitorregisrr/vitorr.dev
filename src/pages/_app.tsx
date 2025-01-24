@@ -25,7 +25,7 @@ interface AppPropsEx extends AppProps {
 }
 
 function App({ Component, pageProps, router }: AppPropsEx) {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', LightTheme)
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', DarkTheme)
   const [isMounted, setMounted] = useState(false)
   const [animationDirection, setAnimationDirection] = useState({
     direction: 'top',
@@ -101,7 +101,10 @@ function App({ Component, pageProps, router }: AppPropsEx) {
 
           {!isDesktop && (
             <>
-              <MobileNav setAnimationDirection={setAnimationDirection} />
+              <MobileNav
+                setAnimationDirection={setAnimationDirection}
+                toggleTheme={toggleTheme}
+              />
             </>
           )}
 
