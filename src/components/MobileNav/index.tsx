@@ -51,7 +51,6 @@ const MobileNav = ({ setAnimationDirection, toggleTheme }: MobileNavProps) => {
             >
               <S.MobileNavWrapper>
                 <S.MobileNavContent>
-                  <LanguagesButton />
                   {navItems.map((item, index) => (
                     <S.MobileNavItem
                       onClick={() => onLinkClickHandler(index)}
@@ -71,11 +70,45 @@ const MobileNav = ({ setAnimationDirection, toggleTheme }: MobileNavProps) => {
                       </Link>
                     </S.MobileNavItem>
                   ))}
-                  <S.MobileNavItemLabel style={{ marginTop: 14, fontSize: 18 }}>
-                    Alternar modo
-                  </S.MobileNavItemLabel>
 
-                  <ThemeTogglerSwitch toggleTheme={toggleTheme} />
+                  <S.MobileNavItem isActive={false}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 12,
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <S.MobileNavItemLabel
+                        style={{ marginTop: 14, fontSize: 18 }}
+                      >
+                        Alternar modo
+                      </S.MobileNavItemLabel>
+
+                      <ThemeTogglerSwitch toggleTheme={toggleTheme} />
+                    </div>
+                  </S.MobileNavItem>
+
+                  <S.MobileNavItem isActive={false}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 12,
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <S.MobileNavItemLabel
+                        style={{ marginTop: 22, fontSize: 18 }}
+                      >
+                        Idioma
+                      </S.MobileNavItemLabel>
+                      <LanguagesButton hasContainer />
+                    </div>
+                  </S.MobileNavItem>
                 </S.MobileNavContent>
               </S.MobileNavWrapper>
             </motion.div>

@@ -46,14 +46,14 @@ export const MobileNavItem = styled.li<MobileNavItemProps>`
     margin: 15px 0;
     gap: 12px;
     text-decoration: none;
-  }
 
-  svg,
-  path {
-    width: 28px;
-    height: 28px;
-    opacity: ${(props) => (props.isActive ? 1 : 0.5)};
-    transition: all 0.3s ease-in-out;
+    svg,
+    path {
+      width: 28px;
+      height: 28px;
+      opacity: ${(props) => (props.isActive ? 1 : 0.5)};
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   &:hover {

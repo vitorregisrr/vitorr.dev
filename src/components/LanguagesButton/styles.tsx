@@ -11,10 +11,10 @@ export const LanguagesButtonWrapper = styled.div<LanguagesButtonWrapper>`
   display: flex;
   align-items: center;
   z-index: 15;
-  1
-    ${(props) =>
-      props.isDisabled &&
-      `
+
+  ${(props) =>
+    props.isDisabled &&
+    `
       opacity: .3;
       cursor: not-allowed;
 
@@ -22,13 +22,14 @@ export const LanguagesButtonWrapper = styled.div<LanguagesButtonWrapper>`
         pointer-events: none;
       }
     `}
-    @media
-    screen
-    and
-    (max-width: 992px) {
-    right: 30px;
-    top: 32px;
-  }
+
+  ${(props) =>
+    props.hasContainer &&
+    `
+    position: relative;
+    top: unset;
+    right: unset;
+    `}
 `
 
 export const LanguageOption = styled.button`
