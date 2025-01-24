@@ -169,7 +169,8 @@ export const HomeCaptionTitle = styled.h1`
 
 export const HomeCaptionParagraph = styled.p`
   font-family: 'Roboto', sans-serif;
-  color: #7d7d7d;
+  color: ${(props) => props.theme.colors.background_opos};
+  opacity: 0.9;
   font-size: 2rem;
   margin-top: 20px;
 
