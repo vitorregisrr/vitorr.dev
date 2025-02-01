@@ -173,11 +173,11 @@ export const HomeCaptionParagraph = styled.p`
   color: ${(props) => props.theme.colors.background_opos};
   opacity: 0.9;
   font-size: 2rem;
+  line-height: 1.5;
   margin-top: 20px;
 
   @media screen and (max-width: 768px) {
     font-size: 1.6rem;
-    line-height: 1.5;
   }
 `
 
